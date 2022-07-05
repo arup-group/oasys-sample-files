@@ -25,6 +25,7 @@ jobs:
       - name: Run a one-line script
         run: |
           function writePages {
+            ignorefiles=( index.md README.md LICENSE )
             hasDir=$([ $(find . -type d | wc -l) -gt 1 ] && echo true || echo false)
             if [[ $hasDir == true ]]
             then
@@ -36,6 +37,13 @@ jobs:
                 echo "- [$one]($one)" >> index.md
               done
 
+              find * -maxdepth 0 -type f -print0 | while IFS= read -r -d $'\0' file; do
+                if ! [[ ${ignorefiles[*]} =~ "$file" ]]
+                then 
+                  echo "- [$file]($file)" >> index.md
+                fi
+              done
+
               for directory in $directories
               do
                 cd $directory
@@ -44,9 +52,11 @@ jobs:
               done
             else
               echo "" > index.md
-              for one in *
-              do
-                echo "- [$one]($one)" >> index.md
+              for one in *; do
+                if ! [[ ${ignorefiles[*]} =~ "$one" ]]
+                then 
+                  echo "- [$one]($one)" >> index.md
+                fi
               done
             fi
           }
