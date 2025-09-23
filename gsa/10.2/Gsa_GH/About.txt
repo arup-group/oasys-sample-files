@@ -1,0 +1,28 @@
+The GSAGH sample files are designed to help engineers and designers explore structural modelling workflows using GSA (General Structural Analysis) integrated with Grasshopper, a visual programming environment within Rhino.
+
+
+These sample files demonstrate a wide range of structural modelling techniques and analysis capabilities. Below is a categorized summary of what’s included:
+
+Sample Files
+1. 3D Boxes.gh – Demonstrates volumetric modelling and meshing.
+2. 4 Point surface with mid-support.gh – Surface modelling with internal support conditions. Galapagos is used to find the optimum internal support position.
+3. Connection modelling.gh – Focus connection modelling.
+4. Edit & update existing models.gh – Enables dynamic editing of GSA models.
+5. Flat slab meshing.gh and .3dm – Demonstrates meshing for slab structures.
+6. Footfall.gh – Simulates dynamic response to pedestrian movement.
+7. Gerber member.gh – Beam modelling.
+8. Inclined column tower.gh – Models complex column geometries.
+9. Member loading.gh – Applies loads to structural members for analysis.
+10. Moment frame structure.gh – Models a rigid frame system and demonstrates how to set up a moment-resisting frame using parametric inputs.
+11. Reciprocal frame.gh – Showcases parametric modelling of architectural and structural forms.
+12. Soil tunnel.gh – Integrates geotechnical elements like tunnels.
+13. Spatial truss.gh – Builds and analyses spatial truss.
+14. Spring and link.gh – Modelling spring and link elements.
+15. Staircase.gh – Models a staircase and performs footfall analysis.
+16. Truss.gh – Builds and analyses truss.
+
+Seed Files
+1. Connection modelling (Seed File).gwb – Contains the model geometry used in Connection Modelling.gh.
+2. Framed Structure.gwb – Used in Edit & Update Existing Models.gh for updating geometry.
+3. Link seed.gwb – Link property defined; used in Spring and Link.gh.
+4. Modal analysis (Seed file).gwb – Modal dynamic analysis task defined; used in Staircase.gh and Footfall.gh.
