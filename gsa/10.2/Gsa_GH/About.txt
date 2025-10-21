@@ -21,11 +21,11 @@ Sample Files
 15. Spring and link.gh – Modelling spring and link elements.
 16. Staircase.gh – Models a staircase and performs footfall analysis.
 17. Truss.gh – Builds and analyses truss.
-18.	Various modes.gh - Runs modal stability, modal buckling and modal dynamic analyses.
+18.	Various modes.gh - Runs model stability, modal buckling and modal dynamic analyses.
 	
 
 Seed Files
-1. Analysis tasks.gwb - Modal stability analysis, modal buckling analysis and modal dynamic analysis tasks defined
+1. Analysis tasks.gwb - Model stability analysis, modal buckling analysis and modal dynamic analysis tasks defined
 2. Connection modelling (Seed File).gwb – Contains the model geometry used in Connection Modelling.gh.
 3. Framed Structure.gwb – Used in Edit & Update Existing Models.gh for updating geometry.
 4. Link seed.gwb – Link property defined; used in Spring and Link.gh.
