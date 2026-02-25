@@ -2089,7 +2089,23 @@
                 {
                     "material": "concrete",
                     "grade": "40 MPa",
-                    "profile": "STD C 568"
+                    "profile": "STD C 568",
+                    "reinforcement": {
+                        "cover": 0.0,
+                        "positionsRelativeTo": "ORIGIN",
+                        "groups": [
+                            {
+                                "type": "CIRCLE",
+                                "position": "(0,0) 220 0 ",
+                                "description": "\"Grade 400\"20-148",
+                                "preload": {
+                                    "preloadType": "NONE",
+                                    "value": 0.0,
+                                    "exclude": true
+                                }
+                            }
+                        ]
+                    }
                 }
             ],
             "tasks": [
@@ -2651,7 +2667,79 @@
                             ]
                         }
                     ],
-                    "links": []
+                    "links": [],
+                    "bars": [
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": 0.22,
+                            "z": 1.02691609836564e-17
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": 0.17798373876248844,
+                            "z": 0.1293127555043441
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": 0.06798373876248844,
+                            "z": 0.2092324335849338
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": -0.06798373876248842,
+                            "z": 0.2092324335849338
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": -0.1779837387624884,
+                            "z": 0.12931275550434413
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": -0.22,
+                            "z": 3.721139056489817e-17
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": -0.17798373876248844,
+                            "z": -0.12931275550434408
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": -0.06798373876248847,
+                            "z": -0.2092324335849338
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": 0.0679837387624884,
+                            "z": -0.2092324335849338
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 2,
+                            "diameter": 0.02,
+                            "y": 0.1779837387624884,
+                            "z": -0.12931275550434416
+                        }
+                    ]
                 }
             ]
         },
@@ -3087,8 +3175,8 @@
                             "zz": 0.0001598
                         },
                         "plastic": {
-                            "zpy": 0.0005076,
-                            "zpz": 0.0002449
+                            "zpy": 0.0001658,
+                            "zpz": 0.00008208
                         },
                         "centroid": {
                             "cy": 0.0,
