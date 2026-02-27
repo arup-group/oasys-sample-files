@@ -9,10 +9,7 @@
         "FullVersion": "10.0.16.53"
     },
     "titles": {
-        "jobNumber": "77101",
-        "jobTitle": "composite strengthening",
-        "subtitle": "1",
-        "calcBy": "sck",
+        "jobTitle": "composite columns",
         "dateSaved": "30-Jan-2026"
     },
     "modelId": {
@@ -536,6 +533,39 @@
                         {
                             "componentID": 2,
                             "activeState": true
+                        }
+                    ],
+                    "cases": [
+                        {
+                            "load": {
+                                "fx": -8000000.0,
+                                "myy": 200000.0,
+                                "mzz": 10.2307
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -9000000.0,
+                                "myy": 300000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -10000000.0,
+                                "myy": 400000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -15000000.0,
+                                "myy": 500000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -18000000.0,
+                                "myy": 600000.0
+                            }
                         }
                     ]
                 }
@@ -1251,6 +1281,38 @@
                             "componentID": 2,
                             "activeState": true
                         }
+                    ],
+                    "cases": [
+                        {
+                            "load": {
+                                "fx": -8000000.0,
+                                "mzz": 200000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -9000000.0,
+                                "mzz": 300000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -10000000.0,
+                                "mzz": 400000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -15000000.0,
+                                "mzz": 500000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -18000000.0,
+                                "mzz": 600000.0
+                            }
+                        }
                     ]
                 }
             ],
@@ -1801,6 +1863,12 @@
                         "userDefinedStrainHigher": 0.0
                     },
                     "loadTerm": "SHORT",
+                    "creepCoefficients": [
+                        {
+                            "componentID": 1,
+                            "creepCoefficient": 0.0
+                        }
+                    ],
                     "componentActiveStates": [
                         {
                             "componentID": 1,
@@ -1809,6 +1877,35 @@
                         {
                             "componentID": 2,
                             "activeState": true
+                        }
+                    ],
+                    "cases": [
+                        {
+                            "load": {
+                                "fx": -8000000.0,
+                                "myy": 100000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -8500000.0,
+                                "myy": 200000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -9000000.0,
+                                "myy": 300000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -9500000.0,
+                                "myy": 400000.0
+                            }
+                        },
+                        {
+                            "load": {}
                         }
                     ]
                 }
@@ -2153,21 +2250,21 @@
                     "cases": [
                         {
                             "load": {
-                                "fx": -12000000.0,
-                                "myy": 1400000.0,
+                                "fx": -8000000.0,
+                                "myy": 200000.0,
                                 "mzz": 10.23070144925125
                             }
                         },
                         {
                             "load": {
-                                "fx": -12000000.0,
-                                "myy": 1300000.0
+                                "fx": -9000000.0,
+                                "myy": 300000.0
                             }
                         },
                         {
                             "load": {
-                                "fx": -7500000.0,
-                                "myy": 1200000.0
+                                "fx": -10000000.0,
+                                "myy": 400000.0
                             }
                         },
                         {
@@ -2818,6 +2915,32 @@
                             "componentID": 2,
                             "activeState": true
                         }
+                    ],
+                    "cases": [
+                        {
+                            "load": {
+                                "fx": -1000000.0,
+                                "myy": 100000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -1100000.0,
+                                "myy": 150000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -1200000.0,
+                                "myy": 200000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -1300000.0,
+                                "myy": 208000.0
+                            }
+                        }
                     ]
                 }
             ],
@@ -3175,8 +3298,8 @@
                             "zz": 0.0001598
                         },
                         "plastic": {
-                            "zpy": 0.0001658,
-                            "zpz": 0.00008208
+                            "zpy": 0.0005076,
+                            "zpz": 0.0002449
                         },
                         "centroid": {
                             "cy": 0.0,

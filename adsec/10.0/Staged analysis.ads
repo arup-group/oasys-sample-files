@@ -1,5 +1,5 @@
 {
-    "filePath": "C:\\Users\\AbishekFestus.Winsto\\OneDrive - Arup\\Arup\\Sample files\\adsec_sample files\\New\\StageLoad.ads",
+    "filePath": "C:\\Repo\\oasys-sample-files\\adsec\\10.0\\Staged analysis.ads",
     "writtenBy": {
         "ProgramName": "AdSec",
         "Company": "Oasys Ltd.",
@@ -9,15 +9,12 @@
         "FullVersion": "10.0.16.53"
     },
     "titles": {
-        "jobNumber": "77101",
-        "jobTitle": "composite strengthening",
-        "subtitle": "1",
-        "calcBy": "sck",
+        "jobTitle": "staged analysis",
         "dateSaved": "30-Jan-2026"
     },
     "modelId": {
-        "modelId": "dd509cdc-311d-4585-a869-5cf4bd1d057a",
-        "parentModelId": "bc4149f0-be38-4bfb-8236-682f69726ec1",
+        "modelId": "3229690f-06a7-4209-b187-23dfb83b1bb2",
+        "parentModelId": "dd509cdc-311d-4585-a869-5cf4bd1d057a",
         "rootModelId": "03972935-a3cb-4e76-b174-9c28795680a0"
     },
     "units": {
@@ -378,42 +375,38 @@
                     "cases": [
                         {
                             "load": {
-                                "myy": 500000.0,
-                                "mzz": 200000.0
+                                "myy": 500000.0
                             }
                         },
                         {
                             "load": {
-                                "myy": 700000.0,
-                                "mzz": 200000.0
+                                "myy": 700000.0
                             }
                         },
                         {
                             "load": {
-                                "myy": 900000.0,
-                                "mzz": 200000.0
+                                "myy": 900000.0
                             }
                         },
                         {
                             "load": {
-                                "myy": 1100000.0,
-                                "mzz": 200000.0
+                                "myy": 1100000.0
                             }
                         },
                         {
                             "load": {
-                                "myy": 1300000.0,
-                                "mzz": 200000.0
+                                "myy": 1300000.0
                             }
                         },
                         {
                             "load": {
-                                "myy": 1500000.0,
-                                "mzz": 200000.0
+                                "myy": 1500000.0
                             }
                         },
                         {
-                            "load": {}
+                            "load": {
+                                "myy": 1700000.0
+                            }
                         }
                     ]
                 }

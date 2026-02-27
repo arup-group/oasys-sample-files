@@ -9,9 +9,7 @@
         "FullVersion": "10.0.16.53"
     },
     "titles": {
-        "jobTitle": "adsec course",
-        "subtitle": "slab shrinkage 8",
-        "calcBy": "SK",
+        "jobTitle": "shrinkage and creep",
         "dateSaved": "30-Jan-2026"
     },
     "modelId": {
@@ -298,11 +296,14 @@
                         {
                             "load": {
                                 "fx": -1500000.0,
-                                "myy": 200000.0
+                                "myy": 150000.0
                             }
                         },
                         {
-                            "load": {}
+                            "load": {
+                                "fx": -1500000.0,
+                                "myy": 200000.0
+                            }
                         }
                     ]
                 }
