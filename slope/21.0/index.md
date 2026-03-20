@@ -1,0 +1,12 @@
+
+- [ExcelVBASample.xlsm](ExcelVBASample.xlsm)
+- [Morgen.sbd](Morgen.sbd)
+- [Noncirc.sbd](Noncirc.sbd)
+- [Noncirc_Optimization.sbd](Noncirc_Optimization.sbd)
+- [PythonSample.py](PythonSample.py)
+- [Sample_5.sbd](Sample_5.sbd)
+- [SimpleSlope.sbd](SimpleSlope.sbd)
+- [Whitbu_calcpp.sbd](Whitbu_calcpp.sbd)
+- [Whitbu_revpp.sbd](Whitbu_revpp.sbd)
+- [ch1350-a-crit-rev-DA1-test.sbd](ch1350-a-crit-rev-DA1-test.sbd)
+- [ch1350-a-crit.sbd](ch1350-a-crit.sbd)
