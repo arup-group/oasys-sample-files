@@ -1,0 +1,51 @@
+!" This file was originally written by GSA version 10.3.0.223 on Thursday, 08 Jan 2026 at 12:11:01"
+!
+! Notes:
+! 1 All data in this file will be interpreted as being in user units
+!   as defined by UNIT_DATA records. These units remain in force until
+!   another UNIT_DATA record is found.
+!   Length units can be long (LENGTH) or short (DISP). In general long
+!"   length units are used except in tolerances, reinforcement details and"
+!   displacement based results.
+!   Acceleration units used are used only for spectra.
+! 2 The date specified in the description for catalogue sections is
+!   optional. If omitted then the most recent section in the catalogue
+!   bearing that name will be assumed.
+!
+TITLE.1					
+SPEC.1	SPACE	0	0	0	0	0	0	PRESSURE
+UNIT_DATA.1	FORCE	N	1
+UNIT_DATA.1	LENGTH	m	1
+UNIT_DATA.1	DISP	m	1
+UNIT_DATA.1	SECTION	m	1
+UNIT_DATA.1	MASS	kg	1
+UNIT_DATA.1	TIME	s	1
+UNIT_DATA.1	TIME_MED	min	0.01666666667
+UNIT_DATA.1	TIME_LONG	day	1.157407407e-05
+UNIT_DATA.1	TEMP	°C	1
+UNIT_DATA.1	STRESS	Pa	1
+UNIT_DATA.1	ACCEL	m/s²	1
+UNIT_DATA.1	ENERGY	J	1
+UNIT_DATA.1	ANGLE	rad	1
+TOL.1	0.01745506493	0.01	0.01	2	0.001	1	0.01	2	0.01745506493	0.01
+SPEC_STEEL_DESIGN.1	<steel generic>	YES	15	YES	15	15	YES	NO	YES	NO
+SPEC_CONC_DESIGN.1	GENERIC	
+SPEC_LOAD_DESIGN.1	LOAD_UNDEF
+SPEC_COMPOS_DESIGN.1	EN 1994-1-1:2004	United Kingdom
+SPEC_RAFT.1	0	1.5	0.2	WEIGHTED_AVERAGE
+SPEC_BRIDGE.1	CODE_NONE	RAILWAY_YES	UK_HK	100
+SPEC_BRIDGE_NDP.1	1	1	1	1	1	1	1	1	0.75	0.4	0.4	0.4	0	0.75	0.4	0.4	0.4	0
+LOCATION.1	90	0	UNDEF	0	0
+ENV_PARAM.4	STEEL	UNDEF	Standard Structural Section	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	CONCRETE	UNDEF	CEM1/OPC: Avg Cementitious Content	low strength	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	ALUMINIUM	UNDEF	Extruded Aluminum Section	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	GLASS	UNDEF	<standard>	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	FRP	UNDEF	<standard>	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	REBAR	UNDEF	Structural Reinforcement	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	TIMBER	UNDEF	Structural Glulam Beam	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	FABRIC	UNDEF	<standard>	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+ENV_PARAM.4	SOIL	UNDEF	<standard>	<standard>	<user>NULL	NaN	NaN	NaN	NaN	NaN	NaN
+SID.1	
+CURRENCY.1	INR
+GRID_LAYOUT.1	1	Default grid layout	0	NO_LOCK	1	1	-10.5	-10.5	10.5	10.5	1	1
+END
