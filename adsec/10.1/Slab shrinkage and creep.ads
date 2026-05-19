@@ -1,22 +1,20 @@
 {
-    "filePath": "C:\\Users\\AbishekFestus.Winsto\\OneDrive - Arup\\Arup\\Sample files\\adsec_sample files\\New\\adsec_10.1\\Slab shrinkage and creep.ads",
+    "filePath": "C:\\Repo\\oasys-sample-files\\adsec\\10.1\\Slab shrinkage and creep.ads",
     "writtenBy": {
         "ProgramName": "AdSec",
         "Company": "Oasys Ltd.",
         "Copyright": "Copyright (c) Oasys 2026",
         "Description": "AdSec",
         "ProgramVersion": "10.1",
-        "FullVersion": "10.1.0.31435"
+        "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobTitle": "adsec course",
-        "subtitle": "slab shrinkage 8",
-        "calcBy": "SK",
+        "jobTitle": "shrinkage & creep",
         "dateSaved": "30-Jan-2026"
     },
     "modelId": {
-        "modelId": "02ba0b12-f8d3-41b3-b12c-e33a665fd1e4",
-        "parentModelId": "ddb84f3a-b011-4d58-9d14-158a772404f6",
+        "modelId": "a379697e-fa66-4195-8661-35fae0c785d5",
+        "parentModelId": "02ba0b12-f8d3-41b3-b12c-e33a665fd1e4",
         "rootModelId": "c6d3ac40-9b64-40e3-bac9-bb4b8ad074e0"
     },
     "units": {

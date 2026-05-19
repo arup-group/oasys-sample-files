@@ -1,20 +1,20 @@
 {
-    "filePath": "C:\\Users\\AbishekFestus.Winsto\\OneDrive - Arup\\Arup\\Sample files\\adsec_sample files\\New\\adsec_10.1\\Perimeter U-Girder section.ads",
+    "filePath": "C:\\Repo\\oasys-sample-files\\adsec\\10.1\\Perimeter U-Girder section.ads",
     "writtenBy": {
         "ProgramName": "AdSec",
         "Company": "Oasys Ltd.",
         "Copyright": "Copyright (c) Oasys 2026",
         "Description": "AdSec",
         "ProgramVersion": "10.1",
-        "FullVersion": "10.1.0.31435"
+        "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "calcBy": "AW",
+        "jobTitle": "U-girder section",
         "dateSaved": "07-Jun-2025"
     },
     "modelId": {
-        "modelId": "fd8a44e8-5e73-4ded-9030-96f1ee89ea28",
-        "parentModelId": "450a71f7-15e6-4a2f-b740-952796f70900",
+        "modelId": "688db41d-903d-47cb-adcb-2d36a1444beb",
+        "parentModelId": "fd8a44e8-5e73-4ded-9030-96f1ee89ea28",
         "rootModelId": "450adfe7-a5f1-45cb-96e0-19d029db1447"
     },
     "units": {

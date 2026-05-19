@@ -1,23 +1,20 @@
 {
-    "filePath": "C:\\Users\\AbishekFestus.Winsto\\OneDrive - Arup\\Arup\\Sample files\\adsec_sample files\\New\\adsec_10.1\\Composite columns.ads",
+    "filePath": "C:\\Repo\\oasys-sample-files\\adsec\\10.1\\Composite columns.ads",
     "writtenBy": {
         "ProgramName": "AdSec",
         "Company": "Oasys Ltd.",
         "Copyright": "Copyright (c) Oasys 2026",
         "Description": "AdSec",
         "ProgramVersion": "10.1",
-        "FullVersion": "10.1.0.31435"
+        "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobNumber": "77101",
         "jobTitle": "composite strengthening",
-        "subtitle": "1",
-        "calcBy": "sck",
         "dateSaved": "30-Jan-2026"
     },
     "modelId": {
-        "modelId": "4e7d7162-e1a5-4773-b644-8cccd98202f5",
-        "parentModelId": "66fd2d65-160f-4e78-8463-011d85fc7baa",
+        "modelId": "a1714168-03da-4073-899d-7ac60a212e28",
+        "parentModelId": "4e7d7162-e1a5-4773-b644-8cccd98202f5",
         "rootModelId": "1dfa5ee6-ec34-4943-aa5c-2550661f2259"
     },
     "units": {
@@ -2115,7 +2112,7 @@
             ]
         },
         {
-            "name": "Concrete-filled steel pipe pile",
+            "name": "Concrete-filled steel pile",
             "components": [
                 {
                     "material": "steel",
@@ -2199,23 +2196,13 @@
                     ],
                     "cases": [
                         {
-                            "load": {
-                                "fx": -12000000.0,
-                                "myy": 1400000.0,
-                                "mzz": 10.23070144925125
-                            }
+                            "load": {}
                         },
                         {
-                            "load": {
-                                "fx": -12000000.0,
-                                "myy": 1300000.0
-                            }
+                            "load": {}
                         },
                         {
-                            "load": {
-                                "fx": -7500000.0,
-                                "myy": 1200000.0
-                            }
+                            "load": {}
                         },
                         {
                             "load": {}
