@@ -9,13 +9,12 @@
         "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobTitle": "shrinkage & creep",
-        "dateSaved": "30-Jan-2026"
+        "jobTitle": "shrinkage & creep"
     },
     "modelId": {
-        "modelId": "a379697e-fa66-4195-8661-35fae0c785d5",
-        "parentModelId": "02ba0b12-f8d3-41b3-b12c-e33a665fd1e4",
-        "rootModelId": "c6d3ac40-9b64-40e3-bac9-bb4b8ad074e0"
+        "modelId": "b9c73ce5-c780-42b2-bc0c-9db9176dc1d2",
+        "parentModelId": "6a7e90da-0784-488e-abb7-d2f2a43b167e",
+        "rootModelId": "7db3a4d2-2993-48a4-82f1-5129419bfcab"
     },
     "units": {
         "force": "kN",
@@ -23,21 +22,21 @@
         "sectionDims": "mm",
         "stress": "N/mm²",
         "mass": "t",
-        "strain": "ε",
+        "strain": "‰",
         "temperature": "°C"
     },
     "codes": {
-        "concrete": "BS8110_97"
+        "concrete": "EC2_GB_04"
     },
     "materials": {
         "concrete": [
             {
-                "name": "C35",
-                "strength": 35000000.0,
-                "elasticModulus": 27000000000.0,
+                "name": "C30/37",
+                "strength": 30000000.0,
+                "elasticModulus": 32836568031.33079,
                 "density": 2400.0,
-                "coefficientOfThermalExpansion": 0.000009999999747378752,
-                "poissonsRatio": 0.20000000298023224,
+                "coefficientOfThermalExpansion": 0.00001,
+                "poissonsRatio": 0.2,
                 "ULS": {
                     "gammaF": 1.5,
                     "gammaE": 1.0,
@@ -47,22 +46,23 @@
                     },
                     "compression": {
                         "model": "RECT_PARABOLA",
-                        "plasticStrainLimit": 0.001159310108050704,
-                        "failureStrain": 0.0035000001080334187
+                        "plasticStrainLimit": 0.002,
+                        "failureStrain": 0.0035
                     }
                 },
                 "SLS": {
                     "gammaF": 1.0,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "BS8110_PT2",
-                        "yieldStrain": 1.0,
-                        "plasticStrainLimit": 1.0,
-                        "failureStrain": 1.0
+                        "model": "INTERPOLATED",
+                        "yieldStrain": 0.0,
+                        "plasticStrainLimit": 0.0,
+                        "failureStrain": 0.0000882086139773573
                     },
                     "compression": {
-                        "model": "LINEAR",
-                        "failureStrain": 0.0035000001080334187
+                        "model": "FIB_SCHEMATIC",
+                        "plasticStrainLimit": 0.0021618768697354803,
+                        "failureStrain": 0.0035
                     }
                 },
                 "type": "Normal weight concrete",
@@ -72,64 +72,65 @@
         ],
         "reinforcement": [
             {
-                "name": "460T",
-                "strength": 460000000.0,
+                "name": "500B",
+                "strength": 500000000.0,
                 "elasticModulus": 200000000000.0,
                 "density": 7850.0,
                 "coefficientOfThermalExpansion": 0.000012,
                 "poissonsRatio": 0.3,
                 "ULS": {
-                    "gammaF": 1.05,
+                    "gammaF": 1.15,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0021904761904761906,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0021904761904761906,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "SLS": {
                     "gammaF": 1.0,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0023,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0023,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "type": "Steel rebar",
-                "label": "T",
+                "label": "B",
                 "ultimateStrain": 0.05,
-                "hardeningModulus": 0.0,
-                "hardeningParameter": 1.0,
+                "hardeningModulus": 727272727.272728,
+                "hardeningParameter": 1.08,
                 "ductility": "NORMAL"
             }
         ]
     },
     "sections": [
         {
+            "name": "shrinkage & creep",
             "components": [
                 {
                     "material": "concrete",
-                    "grade": "C35",
-                    "profile": "STD R(mm) 200. 1000.",
+                    "grade": "C30/37",
+                    "profile": "STD R 200 1000",
                     "reinforcement": {
-                        "cover": 0.02000000141561032,
+                        "cover": 0.02,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINE",
-                                "position": "-450,72 450,72 ",
-                                "description": "10T16",
+                                "position": "(-450,72) (450,72) ",
+                                "description": "10B16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -138,8 +139,8 @@
                             },
                             {
                                 "type": "LINE",
-                                "position": "-450,-72 450,-72 ",
-                                "description": "10T16",
+                                "position": "(-450,-72) (450,-72) ",
+                                "description": "10B16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -158,11 +159,11 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
-                            "utilisation": false,
+                            "utilisation": true,
                             "reductionFactor": false,
                             "concrete": false,
                             "rebar": false
@@ -170,10 +171,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
+                            "interpolatedDeformations": true,
                             "stiffness": true,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -181,6 +182,8 @@
                         }
                     },
                     "codeOptions": {
+                        "crackCalc": "LOCAL",
+                        "Cnom": 0.0,
                         "userDefinedPhiLower": 0.0,
                         "userDefinedPhiHigher": 0.0,
                         "userDefinedStrainLower": 0.0,
@@ -202,9 +205,9 @@
                     "cases": [
                         {
                             "deformation": {
-                                "ex": 0.0003000433148675923,
-                                "kyy": 6.843836530593186e-7,
-                                "kzz": -2.0772087542398193e-8
+                                "ex": 0.000300043,
+                                "kyy": 6.84384e-7,
+                                "kzz": -2.07721e-8
                             }
                         },
                         {
@@ -262,8 +265,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -274,10 +277,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -285,6 +288,8 @@
                         }
                     },
                     "codeOptions": {
+                        "crackCalc": "LOCAL",
+                        "Cnom": 0.0,
                         "userDefinedPhiLower": 0.0,
                         "userDefinedPhiHigher": 0.0,
                         "userDefinedStrainLower": 0.0,
@@ -320,9 +325,6 @@
                                 "fx": -1500000.0,
                                 "myy": 200000.0
                             }
-                        },
-                        {
-                            "load": {}
                         }
                     ]
                 }

@@ -9,32 +9,31 @@
         "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobTitle": "staged analysis",
-        "dateSaved": "30-Jan-2026"
+        "jobTitle": "staged analysis"
     },
     "modelId": {
-        "modelId": "d3f2c006-041e-4f89-b639-a540263c0c1d",
-        "parentModelId": "b324e0f2-41d8-4902-ba70-91d1a1596adf",
-        "rootModelId": "03972935-a3cb-4e76-b174-9c28795680a0"
+        "modelId": "d981446f-de5f-49ff-8ea3-5e42c2cd3b2c",
+        "parentModelId": "fc65dbac-7234-4e6d-95ad-4531646a33cb",
+        "rootModelId": "d00c03d5-2a00-4042-8021-77d14c6c0e92"
     },
     "units": {
         "force": "kN",
         "length": "m",
         "sectionDims": "mm",
-        "stress": "MPa",
-        "mass": "kg",
-        "strain": "ε",
+        "stress": "N/mm²",
+        "mass": "t",
+        "strain": "‰",
         "temperature": "°C"
     },
     "codes": {
-        "concrete": "BS8110_85"
+        "concrete": "EC2_GB_04"
     },
     "materials": {
         "concrete": [
             {
-                "name": "C30",
-                "strength": 30000000.0,
-                "elasticModulus": 26000000000.0,
+                "name": "C25/30",
+                "strength": 25000000.0,
+                "elasticModulus": 31475806210.01935,
                 "density": 2400.0,
                 "coefficientOfThermalExpansion": 0.00001,
                 "poissonsRatio": 0.2,
@@ -47,7 +46,7 @@
                     },
                     "compression": {
                         "model": "RECT_PARABOLA",
-                        "plasticStrainLimit": 0.001073312629199899,
+                        "plasticStrainLimit": 0.002,
                         "failureStrain": 0.0035
                     }
                 },
@@ -55,13 +54,14 @@
                     "gammaF": 1.0,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "BS8110_PT2",
-                        "yieldStrain": 1.0,
-                        "plasticStrainLimit": 1.0,
-                        "failureStrain": 1.0
+                        "model": "INTERPOLATED",
+                        "yieldStrain": 0.0,
+                        "plasticStrainLimit": 0.0,
+                        "failureStrain": 0.00008149001499439174
                     },
                     "compression": {
-                        "model": "LINEAR",
+                        "model": "FIB_SCHEMATIC",
+                        "plasticStrainLimit": 0.0020693662482105194,
                         "failureStrain": 0.0035
                     }
                 },
@@ -72,8 +72,8 @@
         ],
         "reinforcement": [
             {
-                "name": "460T",
-                "strength": 460000000.0,
+                "name": "500B",
+                "strength": 500000000.0,
                 "elasticModulus": 200000000000.0,
                 "density": 7850.0,
                 "coefficientOfThermalExpansion": 0.000012,
@@ -82,54 +82,55 @@
                     "gammaF": 1.15,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0020000000000000005,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0020000000000000005,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "SLS": {
                     "gammaF": 1.0,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0023,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.0023,
-                        "failureStrain": 0.05
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "type": "Steel rebar",
-                "label": "T",
+                "label": "B",
                 "ultimateStrain": 0.05,
-                "hardeningModulus": 0.0,
-                "hardeningParameter": 1.0,
+                "hardeningModulus": 727272727.272728,
+                "hardeningParameter": 1.08,
                 "ductility": "NORMAL"
             }
         ]
     },
     "sections": [
         {
+            "name": "staged analysis",
             "components": [
                 {
                     "material": "concrete",
-                    "grade": "C30",
-                    "profile": "STD R(mm) 700.0002 400.",
+                    "grade": "C25/30",
+                    "profile": "STD R 700 400",
                     "reinforcement": {
-                        "cover": 0.030000001192092896,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"460T\"6",
+                                "description": "B10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -137,9 +138,9 @@
                                 }
                             },
                             {
-                                "type": "LINE",
-                                "position": "-148,306 148,306 ",
-                                "description": "2\"460T\"16",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "2B16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -147,9 +148,9 @@
                                 }
                             },
                             {
-                                "type": "LINE",
-                                "position": "-148,-298 148,-298 ",
-                                "description": "3\"460T\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4B25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -157,19 +158,9 @@
                                 }
                             },
                             {
-                                "type": "LINE",
-                                "position": "-156,-96.7 -156,104.7 ",
-                                "description": "2\"460T\"16",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "156,-96.7 156,104.7 ",
-                                "description": "2\"460T\"16",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "2B16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -181,8 +172,8 @@
                 },
                 {
                     "material": "concrete",
-                    "grade": "C30",
-                    "profile": "STD R(mm) 200. 1000.00 [T(0|450)]",
+                    "grade": "C25/30",
+                    "profile": "STD R 200 1000 [T(0|450)]",
                     "reinforcement": {
                         "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
@@ -190,7 +181,7 @@
                             {
                                 "type": "PERIMETER",
                                 "position": "",
-                                "description": "T20-150",
+                                "description": "B20-150",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -209,8 +200,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -221,10 +212,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -232,6 +223,8 @@
                         }
                     },
                     "codeOptions": {
+                        "crackCalc": "LOCAL",
+                        "Cnom": 0.0,
                         "userDefinedPhiLower": 0.0,
                         "userDefinedPhiHigher": 0.0,
                         "userDefinedStrainLower": 0.0,
@@ -255,7 +248,7 @@
                         },
                         {
                             "componentID": 2,
-                            "activeState": false
+                            "activeState": true
                         }
                     ],
                     "cases": [
@@ -293,9 +286,6 @@
                             "load": {
                                 "myy": 220000.0
                             }
-                        },
-                        {
-                            "load": {}
                         }
                     ]
                 },
@@ -309,34 +299,92 @@
                         "componentPrestrains": [
                             {
                                 "componentID": 1,
-                                "isInterpolatedType": false,
+                                "isInterpolatedType": true,
                                 "isConcreteOnlyStrain": false,
                                 "ulsPrestrain": {
-                                    "ex": 0.0007032700000000003,
-                                    "kyy": 0.0029614000000000016,
-                                    "kzz": 9.746920000000007e-9
+                                    "ex": 0.00006583810000000004,
+                                    "kyy": 0.0003671100000000002,
+                                    "kzz": 0.0
                                 },
-                                "slsPrestrain": {
-                                    "ex": 0.0004393740000000002,
-                                    "kyy": 0.002343710000000001,
-                                    "kzz": -3.426030000000002e-8
+                                "InterpolatedPrestrain": {
+                                    "uncracked": {
+                                        "ex": -4.831110000000003e-7,
+                                        "kyy": 0.00019276900000000008,
+                                        "kzz": 0.0
+                                    },
+                                    "cracked": {
+                                        "ex": 0.00006472150000000004,
+                                        "kyy": 0.00037226200000000016,
+                                        "kzz": 0.0
+                                    }
+                                }
+                            },
+                            {
+                                "componentID": 2,
+                                "isInterpolatedType": true,
+                                "isConcreteOnlyStrain": false,
+                                "ulsPrestrain": {
+                                    "ex": 0.00006583810000000004,
+                                    "kyy": 0.0003671100000000002,
+                                    "kzz": 0.0
+                                },
+                                "InterpolatedPrestrain": {
+                                    "uncracked": {
+                                        "ex": -4.831110000000003e-7,
+                                        "kyy": 0.00019276900000000008,
+                                        "kzz": 0.0
+                                    },
+                                    "cracked": {
+                                        "ex": 0.00006472150000000004,
+                                        "kyy": 0.00037226200000000016,
+                                        "kzz": 0.0
+                                    }
                                 }
                             }
                         ],
                         "adjustedComponentPrestrains": [
                             {
                                 "componentID": 1,
-                                "isInterpolatedType": false,
+                                "isInterpolatedType": true,
                                 "isConcreteOnlyStrain": false,
                                 "ulsPrestrain": {
-                                    "ex": 0.0012585300000000008,
-                                    "kyy": 0.0029614000000000016,
-                                    "kzz": 9.746920000000007e-9
+                                    "ex": 0.00006583810000000004,
+                                    "kyy": 0.0003671100000000002,
+                                    "kzz": 0.0
                                 },
-                                "slsPrestrain": {
-                                    "ex": 0.0008788200000000004,
-                                    "kyy": 0.002343710000000001,
-                                    "kzz": -3.426030000000002e-8
+                                "InterpolatedPrestrain": {
+                                    "uncracked": {
+                                        "ex": -4.831110000000003e-7,
+                                        "kyy": 0.00019276900000000008,
+                                        "kzz": 0.0
+                                    },
+                                    "cracked": {
+                                        "ex": 0.00006472150000000004,
+                                        "kyy": 0.00037226200000000016,
+                                        "kzz": 0.0
+                                    }
+                                }
+                            },
+                            {
+                                "componentID": 2,
+                                "isInterpolatedType": true,
+                                "isConcreteOnlyStrain": false,
+                                "ulsPrestrain": {
+                                    "ex": 0.00006583810000000004,
+                                    "kyy": 0.0003671100000000002,
+                                    "kzz": 0.0
+                                },
+                                "InterpolatedPrestrain": {
+                                    "uncracked": {
+                                        "ex": -4.831110000000003e-7,
+                                        "kyy": 0.00019276900000000008,
+                                        "kzz": 0.0
+                                    },
+                                    "cracked": {
+                                        "ex": 0.00006472150000000004,
+                                        "kyy": 0.00037226200000000016,
+                                        "kzz": 0.0
+                                    }
                                 }
                             }
                         ]
@@ -345,8 +393,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -357,10 +405,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -368,6 +416,8 @@
                         }
                     },
                     "codeOptions": {
+                        "crackCalc": "LOCAL",
+                        "Cnom": 0.0,
                         "userDefinedPhiLower": 0.0,
                         "userDefinedPhiHigher": 0.0,
                         "userDefinedStrainLower": 0.0,
@@ -430,18 +480,15 @@
                                 "myy": 1500000.0,
                                 "mzz": 200000.0
                             }
-                        },
-                        {
-                            "load": {}
                         }
                     ]
                 }
             ],
-            "rebarPercentage": 1.8011797880581475,
+            "rebarPercentage": 1.707586506919952,
             "extents": {
                 "yMin": -0.5,
                 "yMax": 0.5,
-                "zMin": 0.3625000312499948,
+                "zMin": 0.36250000000000004,
                 "zMax": -0.5375
             },
             "properties": [
@@ -463,7 +510,7 @@
                             "kz": 0.8333333
                         },
                         "torsion": {
-                            "j": 0.009605104159924473
+                            "j": 0.0096050999478484
                         },
                         "elastic": {
                             "zy": 0.03266666666666668,
@@ -511,8 +558,8 @@
                     "links": [
                         {
                             "grade": 1,
-                            "diameter": 0.006,
-                            "path": "M -0.146000 0.129500 A 0.021000 0.021000 0 0 1 -0.167000 0.108500 L -0.167000 -0.483500 L -0.167000 -0.483500 A 0.021000 0.021000 0 0 1 -0.146000 -0.504500 L 0.146000 -0.504500 L 0.146000 -0.504500 A 0.021000 0.021000 0 0 1 0.167000 -0.483500 L 0.167000 0.108500 L 0.167000 0.108500 A 0.021000 0.021000 0 0 1 0.146000 0.129500 L -0.146000 0.129500"
+                            "diameter": 0.01,
+                            "path": "M -0.165000 -0.477500 A 0.025000 0.025000 0 0 1 -0.140000 -0.502500 L 0.140000 -0.502500 A 0.025000 0.025000 0 0 1 0.165000 -0.477500 L 0.165000 0.102500 A 0.025000 0.025000 0 0 1 0.140000 0.127500 L -0.140000 0.127500 A 0.025000 0.025000 0 0 1 -0.165000 0.102500 L -0.165000 -0.477500"
                         }
                     ],
                     "bars": [
@@ -520,64 +567,71 @@
                             "groupId": 1,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": -0.148,
-                            "z": 0.11850003124999475
+                            "y": -0.14848528137423858,
+                            "z": 0.11098528137423863
                         },
                         {
                             "groupId": 1,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": 0.148,
-                            "z": 0.11850003124999475
+                            "y": 0.14848528137423858,
+                            "z": 0.11098528137423863
                         },
                         {
                             "groupId": 2,
                             "grade": 1,
-                            "diameter": 0.032,
-                            "y": -0.148,
-                            "z": -0.48549996875000523
+                            "diameter": 0.025,
+                            "y": -0.14530330085889911,
+                            "z": -0.48280330085889916
                         },
                         {
                             "groupId": 2,
                             "grade": 1,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": -0.48549996875000523
+                            "diameter": 0.025,
+                            "y": -0.049166666666666664,
+                            "z": -0.48500000000000004
                         },
                         {
                             "groupId": 2,
                             "grade": 1,
-                            "diameter": 0.032,
-                            "y": 0.148,
-                            "z": -0.48549996875000523
+                            "diameter": 0.025,
+                            "y": 0.049166666666666664,
+                            "z": -0.48500000000000004
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 1,
+                            "diameter": 0.025,
+                            "y": 0.14530330085889911,
+                            "z": -0.48280330085889916
                         },
                         {
                             "groupId": 3,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": -0.156,
-                            "z": -0.28419996875000525
+                            "y": -0.152,
+                            "z": -0.08416666666666667
                         },
                         {
                             "groupId": 3,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": -0.156,
-                            "z": -0.08279996875000524
+                            "y": -0.152,
+                            "z": -0.2908333333333334
                         },
                         {
-                            "groupId": 4,
+                            "groupId": 3,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": 0.156,
-                            "z": -0.28419996875000525
+                            "y": 0.152,
+                            "z": -0.2908333333333334
                         },
                         {
-                            "groupId": 4,
+                            "groupId": 3,
                             "grade": 1,
                             "diameter": 0.016,
-                            "y": 0.156,
-                            "z": -0.08279996875000524
+                            "y": 0.152,
+                            "z": -0.08416666666666667
                         }
                     ]
                 },
@@ -587,7 +641,7 @@
                         "localAxis": {
                             "iyy": 0.0006666666666666661,
                             "izz": 0.016666666666666673,
-                            "iyz": -9.79717439317883e-19
+                            "iyz": 9.79717439317883e-19
                         },
                         "principalAxis": {
                             "iuu": 0.016666666666666673,
@@ -607,11 +661,11 @@
                         },
                         "plastic": {
                             "zpy": 0.010000000000000007,
-                            "zpz": 0.05528125203124986
+                            "zpz": 0.05528125000000002
                         },
                         "centroid": {
                             "cy": 0.0,
-                            "cz": 0.26250003124999477
+                            "cz": 0.2625
                         },
                         "radiusOfGyration": {
                             "ry": 0.05773502691896254,
@@ -627,19 +681,19 @@
                             "points": [
                                 {
                                     "y": -0.5,
-                                    "z": 0.3625000312499948
+                                    "z": 0.36250000000000004
                                 },
                                 {
                                     "y": -0.5,
-                                    "z": 0.16250003124999474
+                                    "z": 0.16249999999999998
                                 },
                                 {
                                     "y": 0.5,
-                                    "z": 0.16250003124999474
+                                    "z": 0.16249999999999998
                                 },
                                 {
                                     "y": 0.5,
-                                    "z": 0.3625000312499948
+                                    "z": 0.36250000000000004
                                 }
                             ]
                         }
@@ -651,112 +705,112 @@
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.46,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.46,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.46,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.46,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.3285714285714286,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.19714285714285718,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.06571428571428573,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.06571428571428567,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.197142857142857,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.32857142857142857,
-                            "z": 0.20250003124999477
+                            "z": 0.2025
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.3285714285714286,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.19714285714285718,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": 0.06571428571428573,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.06571428571428567,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.197142857142857,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         },
                         {
                             "groupId": 0,
                             "grade": 1,
                             "diameter": 0.02,
                             "y": -0.32857142857142857,
-                            "z": 0.32250003124999477
+                            "z": 0.3225
                         }
                     ]
                 }

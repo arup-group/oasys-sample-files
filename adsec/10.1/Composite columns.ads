@@ -9,65 +9,27 @@
         "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobTitle": "composite strengthening",
-        "dateSaved": "30-Jan-2026"
+        "jobTitle": "composite strengthening"
     },
     "modelId": {
-        "modelId": "a1714168-03da-4073-899d-7ac60a212e28",
-        "parentModelId": "4e7d7162-e1a5-4773-b644-8cccd98202f5",
-        "rootModelId": "1dfa5ee6-ec34-4943-aa5c-2550661f2259"
+        "modelId": "68c319b3-0043-4d09-84ec-7a1bce8f610f",
+        "parentModelId": "afc56c82-592f-4430-98a0-209865c36c60",
+        "rootModelId": "4bac6a64-307e-4284-b9d7-2d4ac28a2444"
     },
     "units": {
         "force": "kN",
         "length": "m",
         "sectionDims": "mm",
         "stress": "N/mm²",
-        "mass": "kg",
-        "strain": "ε",
+        "mass": "t",
+        "strain": "‰",
         "temperature": "°C"
     },
     "codes": {
-        "concrete": "ACI318M_08"
+        "concrete": "ACI318M_19"
     },
     "materials": {
         "reinforcement": [
-            {
-                "name": "Grade 400",
-                "strength": 400000000.0,
-                "elasticModulus": 200000000000.0,
-                "density": 7850.0,
-                "coefficientOfThermalExpansion": 0.000012,
-                "poissonsRatio": 0.3,
-                "ULS": {
-                    "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002,
-                        "failureStrain": 0.07
-                    },
-                    "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002,
-                        "failureStrain": 0.07
-                    }
-                },
-                "SLS": {
-                    "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002,
-                        "failureStrain": 0.07
-                    },
-                    "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002,
-                        "failureStrain": 0.07
-                    }
-                },
-                "type": "Steel rebar",
-                "ultimateStrain": 0.07,
-                "hardeningModulus": 0.0,
-                "hardeningParameter": 1.0,
-                "ductility": "NORMAL"
-            },
             {
                 "name": "Grade 420",
                 "strength": 420000000.0,
@@ -142,34 +104,34 @@
         ],
         "frp": [
             {
-                "name": "Sika CarboDur S modified-10041",
-                "strength": 3049999872.0,
-                "elasticModulus": 165000003584.0,
+                "name": "Sika CarboDur S",
+                "strength": 3050000000.0,
+                "elasticModulus": 165000000000.0,
                 "density": 1600.0,
-                "coefficientOfThermalExpansion": 0.000007999999979801942,
-                "poissonsRatio": 0.3300000131130219,
+                "coefficientOfThermalExpansion": 0.000008,
+                "poissonsRatio": 0.33,
                 "ULS": {
                     "tension": {
                         "model": "NO_COMPRESSION",
-                        "failureStrain": 0.01848484730757762
+                        "failureStrain": 0.015712121212121212
                     },
                     "compression": {
                         "model": "NO_COMPRESSION",
-                        "failureStrain": 0.01848484730757762
+                        "failureStrain": 0.015712121212121212
                     }
                 },
                 "SLS": {
                     "tension": {
                         "model": "NO_COMPRESSION",
-                        "failureStrain": 0.01848484730757762
+                        "failureStrain": 0.018484848484848486
                     },
                     "compression": {
                         "model": "NO_COMPRESSION",
-                        "failureStrain": 0.01848484730757762
+                        "failureStrain": 0.018484848484848486
                     }
                 },
-                "bondStrainLimit": 0.004,
-                "environmentalFactor": 0.85
+                "bondStrainLimit": 0.006,
+                "environmentalFactor": 1.0
             }
         ]
     },
@@ -179,15 +141,15 @@
                 {
                     "material": "concrete",
                     "grade": "35 MPa",
-                    "profile": "STD R(mm) 800. 600.",
+                    "profile": "STD R 800 600",
                     "reinforcement": {
-                        "cover": 0.03500000014901161,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"Grade 400\"8",
+                                "description": "\"Grade 420\"10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -195,9 +157,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "-241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "4\"Grade 420\"16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -205,9 +167,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -215,119 +177,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,-341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "\"Grade 420\"16-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -340,15 +192,15 @@
                 {
                     "material": "concrete",
                     "grade": "35 MPa",
-                    "profile": "STD R(mm) 800. 600. [T(600|0)]",
+                    "profile": "STD R 800 600 [T(600|0)]",
                     "reinforcement": {
-                        "cover": 0.03500000014901161,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"Grade 400\"8",
+                                "description": "\"Grade 420\"10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -356,9 +208,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "-241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "4\"Grade 420\"16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -366,9 +218,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -376,119 +228,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,-341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "\"Grade 420\"16-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -507,8 +249,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -519,10 +261,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -548,7 +290,7 @@
                     ]
                 }
             ],
-            "rebarPercentage": 2.3457225146803795,
+            "rebarPercentage": 0.8279405639148103,
             "extents": {
                 "yMin": -0.6,
                 "yMax": 0.5999999999999999,
@@ -621,109 +363,109 @@
                     ],
                     "links": [
                         {
-                            "grade": 2,
-                            "diameter": 0.008,
-                            "path": "M -0.533000 0.361000 A 0.028000 0.028000 0 0 1 -0.561000 0.333000 L -0.561000 -0.333000 L -0.561000 -0.333000 A 0.028000 0.028000 0 0 1 -0.533000 -0.361000 L -0.067000 -0.361000 L -0.067000 -0.361000 A 0.028000 0.028000 0 0 1 -0.039000 -0.333000 L -0.039000 0.333000 L -0.039000 0.333000 A 0.028000 0.028000 0 0 1 -0.067000 0.361000 L -0.533000 0.361000"
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M -0.565000 -0.330000 A 0.035000 0.035000 0 0 1 -0.530000 -0.365000 L -0.070000 -0.365000 A 0.035000 0.035000 0 0 1 -0.035000 -0.330000 L -0.035000 0.330000 A 0.035000 0.035000 0 0 1 -0.070000 0.365000 L -0.530000 0.365000 A 0.035000 0.035000 0 0 1 -0.565000 0.330000 L -0.565000 -0.330000"
                         }
                     ],
                     "bars": [
                         {
                             "groupId": 1,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.5455563491861041,
+                            "z": 0.34555634918610406
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.384,
+                            "z": 0.35200000000000004
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.21600000000000003,
+                            "z": 0.35200000000000004
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.05444365081389593,
+                            "z": 0.34555634918610406
                         },
                         {
                             "groupId": 2,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.5423743686707646,
+                            "z": -0.3423743686707646
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.3825,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.21750000000000003,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.0576256313292354,
+                            "z": -0.3423743686707646
                         },
                         {
                             "groupId": 3,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": -0.341
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.552,
+                            "z": 0.18
                         },
                         {
-                            "groupId": 4,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.552,
+                            "z": 0.0
                         },
                         {
-                            "groupId": 5,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": -0.2046
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.552,
+                            "z": -0.18
                         },
                         {
-                            "groupId": 6,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": -0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.04799999999999999,
+                            "z": -0.18000000000000002
                         },
                         {
-                            "groupId": 7,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": 0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.04799999999999999,
+                            "z": -2.7755575615628914e-17
                         },
                         {
-                            "groupId": 8,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.5409999999999999,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 9,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.3,
-                            "z": 0.341
-                        },
-                        {
-                            "groupId": 10,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": -0.2046
-                        },
-                        {
-                            "groupId": 11,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": -0.0682
-                        },
-                        {
-                            "groupId": 12,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": 0.0682
-                        },
-                        {
-                            "groupId": 13,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.059,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 14,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.3,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.04799999999999999,
+                            "z": 0.17999999999999997
                         }
                     ]
                 },
@@ -792,109 +534,109 @@
                     ],
                     "links": [
                         {
-                            "grade": 2,
-                            "diameter": 0.008,
-                            "path": "M 0.067000 0.361000 A 0.028000 0.028000 0 0 1 0.039000 0.333000 L 0.039000 -0.333000 L 0.039000 -0.333000 A 0.028000 0.028000 0 0 1 0.067000 -0.361000 L 0.533000 -0.361000 L 0.533000 -0.361000 A 0.028000 0.028000 0 0 1 0.561000 -0.333000 L 0.561000 0.333000 L 0.561000 0.333000 A 0.028000 0.028000 0 0 1 0.533000 0.361000 L 0.067000 0.361000"
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M 0.035000 -0.330000 A 0.035000 0.035000 0 0 1 0.070000 -0.365000 L 0.530000 -0.365000 A 0.035000 0.035000 0 0 1 0.565000 -0.330000 L 0.565000 0.330000 A 0.035000 0.035000 0 0 1 0.530000 0.365000 L 0.070000 0.365000 A 0.035000 0.035000 0 0 1 0.035000 0.330000 L 0.035000 -0.330000"
                         }
                     ],
                     "bars": [
                         {
                             "groupId": 1,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.05444365081389593,
+                            "z": 0.34555634918610406
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.21599999999999997,
+                            "z": 0.35200000000000004
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.38399999999999995,
+                            "z": 0.35200000000000004
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.5455563491861041,
+                            "z": 0.34555634918610406
                         },
                         {
                             "groupId": 2,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.0576256313292354,
+                            "z": -0.3423743686707646
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.21749999999999997,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.38249999999999995,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.5423743686707646,
+                            "z": -0.3423743686707646
                         },
                         {
                             "groupId": 3,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": -0.341
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.04799999999999999,
+                            "z": 0.18
                         },
                         {
-                            "groupId": 4,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.04799999999999999,
+                            "z": 0.0
                         },
                         {
-                            "groupId": 5,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": -0.2046
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.04799999999999999,
+                            "z": -0.18
                         },
                         {
-                            "groupId": 6,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": -0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.552,
+                            "z": -0.18000000000000002
                         },
                         {
-                            "groupId": 7,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": 0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.552,
+                            "z": -2.7755575615628914e-17
                         },
                         {
-                            "groupId": 8,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.059,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 9,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.3,
-                            "z": 0.341
-                        },
-                        {
-                            "groupId": 10,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": -0.2046
-                        },
-                        {
-                            "groupId": 11,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": -0.0682
-                        },
-                        {
-                            "groupId": 12,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": 0.0682
-                        },
-                        {
-                            "groupId": 13,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.5409999999999999,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 14,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.3,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.552,
+                            "z": 0.17999999999999997
                         }
                     ]
                 }
@@ -905,15 +647,15 @@
                 {
                     "material": "concrete",
                     "grade": "35 MPa",
-                    "profile": "STD R(mm) 800. 600.",
+                    "profile": "STD R 800 600",
                     "reinforcement": {
-                        "cover": 0.03500000014901161,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"Grade 400\"8",
+                                "description": "\"Grade 420\"10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -921,9 +663,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "-241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "4\"Grade 420\"16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -931,9 +673,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -941,119 +683,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,-341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "\"Grade 420\"16-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1066,15 +698,15 @@
                 {
                     "material": "concrete",
                     "grade": "35 MPa",
-                    "profile": "STD R(mm) 800. 600. [T(0|800)]",
+                    "profile": "STD R 800 600 [T(0|-800)]",
                     "reinforcement": {
-                        "cover": 0.03500000014901161,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"Grade 400\"8",
+                                "description": "\"Grade 420\"10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1082,9 +714,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "-241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "4\"Grade 420\"16",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1092,9 +724,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1102,119 +734,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,-341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "\"Grade 420\"16-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1233,8 +755,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -1245,10 +767,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -1274,12 +796,12 @@
                     ]
                 }
             ],
-            "rebarPercentage": 2.345722514680379,
+            "rebarPercentage": 0.8279405639148102,
             "extents": {
                 "yMin": -0.3,
                 "yMax": 0.3,
-                "zMin": 0.8000000000000002,
-                "zMax": -0.8
+                "zMin": 0.8,
+                "zMax": -0.8000000000000002
             },
             "properties": [
                 {
@@ -1312,7 +834,7 @@
                         },
                         "centroid": {
                             "cy": 0.0,
-                            "cz": -0.4
+                            "cz": 0.4
                         },
                         "radiusOfGyration": {
                             "ry": 0.2309401076758503,
@@ -1328,128 +850,128 @@
                             "points": [
                                 {
                                     "y": 0.3,
-                                    "z": 0.0
+                                    "z": 0.8
+                                },
+                                {
+                                    "y": -0.3,
+                                    "z": 0.8
                                 },
                                 {
                                     "y": -0.3,
                                     "z": 0.0
-                                },
-                                {
-                                    "y": -0.3,
-                                    "z": -0.8
                                 },
                                 {
                                     "y": 0.3,
-                                    "z": -0.8
+                                    "z": 0.0
                                 }
                             ]
                         }
                     ],
                     "links": [
                         {
-                            "grade": 2,
-                            "diameter": 0.008,
-                            "path": "M -0.233000 -0.039000 A 0.028000 0.028000 0 0 1 -0.261000 -0.067000 L -0.261000 -0.733000 L -0.261000 -0.733000 A 0.028000 0.028000 0 0 1 -0.233000 -0.761000 L 0.233000 -0.761000 L 0.233000 -0.761000 A 0.028000 0.028000 0 0 1 0.261000 -0.733000 L 0.261000 -0.067000 L 0.261000 -0.067000 A 0.028000 0.028000 0 0 1 0.233000 -0.039000 L -0.233000 -0.039000"
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M -0.265000 0.070000 A 0.035000 0.035000 0 0 1 -0.230000 0.035000 L 0.230000 0.035000 A 0.035000 0.035000 0 0 1 0.265000 0.070000 L 0.265000 0.730000 A 0.035000 0.035000 0 0 1 0.230000 0.765000 L -0.230000 0.765000 A 0.035000 0.035000 0 0 1 -0.265000 0.730000 L -0.265000 0.070000"
                         }
                     ],
                     "bars": [
                         {
                             "groupId": 1,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.059
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.24555634918610406,
+                            "z": 0.7455563491861041
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.08400000000000002,
+                            "z": 0.752
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.08399999999999996,
+                            "z": 0.752
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.24555634918610406,
+                            "z": 0.7455563491861041
                         },
                         {
                             "groupId": 2,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.059
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2423743686707646,
+                            "z": 0.05762563132923543
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.08250000000000002,
+                            "z": 0.05249999999999999
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.08249999999999996,
+                            "z": 0.05249999999999999
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2423743686707646,
+                            "z": 0.05762563132923543
                         },
                         {
                             "groupId": 3,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.7410000000000001
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": 0.5800000000000001
                         },
                         {
-                            "groupId": 4,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.7410000000000001
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": 0.4
                         },
                         {
-                            "groupId": 5,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.6046
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": 0.22000000000000003
                         },
                         {
-                            "groupId": 6,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.4682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": 0.22
                         },
                         {
-                            "groupId": 7,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.33180000000000004
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": 0.4
                         },
                         {
-                            "groupId": 8,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.19540000000000002
-                        },
-                        {
-                            "groupId": 9,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": -0.059
-                        },
-                        {
-                            "groupId": 10,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.6046
-                        },
-                        {
-                            "groupId": 11,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.4682
-                        },
-                        {
-                            "groupId": 12,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.33180000000000004
-                        },
-                        {
-                            "groupId": 13,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.19540000000000002
-                        },
-                        {
-                            "groupId": 14,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": -0.7410000000000001
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": 0.58
                         }
                     ]
                 },
@@ -1483,7 +1005,7 @@
                         },
                         "centroid": {
                             "cy": 0.0,
-                            "cz": 0.4000000000000002
+                            "cz": -0.4000000000000002
                         },
                         "radiusOfGyration": {
                             "ry": 0.23094010767585021,
@@ -1499,128 +1021,128 @@
                             "points": [
                                 {
                                     "y": -0.3,
-                                    "z": 0.8000000000000002
+                                    "z": 0.0
                                 },
                                 {
                                     "y": -0.3,
-                                    "z": 0.0
+                                    "z": -0.8000000000000002
+                                },
+                                {
+                                    "y": 0.3,
+                                    "z": -0.8000000000000002
                                 },
                                 {
                                     "y": 0.3,
                                     "z": 0.0
-                                },
-                                {
-                                    "y": 0.3,
-                                    "z": 0.8000000000000002
                                 }
                             ]
                         }
                     ],
                     "links": [
                         {
-                            "grade": 2,
-                            "diameter": 0.008,
-                            "path": "M -0.233000 0.761000 A 0.028000 0.028000 0 0 1 -0.261000 0.733000 L -0.261000 0.067000 L -0.261000 0.067000 A 0.028000 0.028000 0 0 1 -0.233000 0.039000 L 0.233000 0.039000 L 0.233000 0.039000 A 0.028000 0.028000 0 0 1 0.261000 0.067000 L 0.261000 0.733000 L 0.261000 0.733000 A 0.028000 0.028000 0 0 1 0.233000 0.761000 L -0.233000 0.761000"
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M -0.265000 -0.730000 A 0.035000 0.035000 0 0 1 -0.230000 -0.765000 L 0.230000 -0.765000 A 0.035000 0.035000 0 0 1 0.265000 -0.730000 L 0.265000 -0.070000 A 0.035000 0.035000 0 0 1 0.230000 -0.035000 L -0.230000 -0.035000 A 0.035000 0.035000 0 0 1 -0.265000 -0.070000 L -0.265000 -0.730000"
                         }
                     ],
                     "bars": [
                         {
                             "groupId": 1,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.7410000000000001
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.24555634918610406,
+                            "z": -0.05444365081389596
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.08400000000000002,
+                            "z": -0.04799999999999999
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.08399999999999996,
+                            "z": -0.04799999999999999
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.24555634918610406,
+                            "z": -0.05444365081389596
                         },
                         {
                             "groupId": 2,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.7410000000000001
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2423743686707646,
+                            "z": -0.7423743686707647
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.08250000000000002,
+                            "z": -0.7475
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.08249999999999996,
+                            "z": -0.7475
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2423743686707646,
+                            "z": -0.7423743686707647
                         },
                         {
                             "groupId": 3,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.059
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": -0.22000000000000003
                         },
                         {
-                            "groupId": 4,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.059
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": -0.4
                         },
                         {
-                            "groupId": 5,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.19540000000000002
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.252,
+                            "z": -0.5800000000000001
                         },
                         {
-                            "groupId": 6,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.33180000000000004
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": -0.5800000000000001
                         },
                         {
-                            "groupId": 7,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.4682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": -0.4
                         },
                         {
-                            "groupId": 8,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.6046
-                        },
-                        {
-                            "groupId": 9,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": 0.7410000000000001
-                        },
-                        {
-                            "groupId": 10,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.19540000000000002
-                        },
-                        {
-                            "groupId": 11,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.33180000000000004
-                        },
-                        {
-                            "groupId": 12,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.4682
-                        },
-                        {
-                            "groupId": 13,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.6046
-                        },
-                        {
-                            "groupId": 14,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": 0.059
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.252,
+                            "z": -0.22000000000000006
                         }
                     ]
                 }
@@ -1632,15 +1154,15 @@
                 {
                     "material": "concrete",
                     "grade": "35 MPa",
-                    "profile": "STD R(mm) 800. 600.",
+                    "profile": "STD R 800 600",
                     "reinforcement": {
-                        "cover": 0.03500000014901161,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
                                 "type": "LINK",
                                 "position": "",
-                                "description": "\"Grade 400\"8",
+                                "description": "\"Grade 420\"10",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1648,9 +1170,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "-241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "TOP",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1658,9 +1180,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "BOTTOM",
+                                "position": "",
+                                "description": "4\"Grade 420\"25",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1668,119 +1190,9 @@
                                 }
                             },
                             {
-                                "type": "POINT",
-                                "position": "241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,341 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,-68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,68.2 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "241,204.6 ",
-                                "description": "\"Grade 400\"32",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "0,-341 ",
-                                "description": "\"Grade 400\"32",
+                                "type": "SIDES",
+                                "position": "",
+                                "description": "\"Grade 420\"25-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -1792,7 +1204,7 @@
                 },
                 {
                     "material": "frp",
-                    "grade": "Sika CarboDur S modified-10041",
+                    "grade": "Sika CarboDur S",
                     "profile": "STD RHS(mm) 810. 610. 5. 5."
                 }
             ],
@@ -1804,8 +1216,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -1816,10 +1228,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -1845,7 +1257,7 @@
                     ]
                 }
             ],
-            "rebarPercentage": 2.3457225146803795,
+            "rebarPercentage": 1.4317154020265983,
             "extents": {
                 "yMin": -0.305,
                 "yMax": 0.305,
@@ -1918,109 +1330,109 @@
                     ],
                     "links": [
                         {
-                            "grade": 2,
-                            "diameter": 0.008,
-                            "path": "M -0.233000 0.361000 A 0.028000 0.028000 0 0 1 -0.261000 0.333000 L -0.261000 -0.333000 L -0.261000 -0.333000 A 0.028000 0.028000 0 0 1 -0.233000 -0.361000 L 0.233000 -0.361000 L 0.233000 -0.361000 A 0.028000 0.028000 0 0 1 0.261000 -0.333000 L 0.261000 0.333000 L 0.261000 0.333000 A 0.028000 0.028000 0 0 1 0.233000 0.361000 L -0.233000 0.361000"
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M -0.265000 -0.330000 A 0.035000 0.035000 0 0 1 -0.230000 -0.365000 L 0.230000 -0.365000 A 0.035000 0.035000 0 0 1 0.265000 -0.330000 L 0.265000 0.330000 A 0.035000 0.035000 0 0 1 0.230000 0.365000 L -0.230000 0.365000 A 0.035000 0.035000 0 0 1 -0.265000 0.330000 L -0.265000 -0.330000"
                         }
                     ],
                     "bars": [
                         {
                             "groupId": 1,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2423743686707646,
+                            "z": 0.3423743686707646
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.08250000000000002,
+                            "z": 0.34750000000000003
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.08249999999999996,
+                            "z": 0.34750000000000003
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2423743686707646,
+                            "z": 0.3423743686707646
                         },
                         {
                             "groupId": 2,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.341
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2423743686707646,
+                            "z": -0.3423743686707646
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.08250000000000002,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.08249999999999996,
+                            "z": -0.34750000000000003
+                        },
+                        {
+                            "groupId": 2,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2423743686707646,
+                            "z": -0.3423743686707646
                         },
                         {
                             "groupId": 3,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.341
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2475,
+                            "z": 0.18
                         },
                         {
-                            "groupId": 4,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2475,
+                            "z": 0.0
                         },
                         {
-                            "groupId": 5,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.2046
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": -0.2475,
+                            "z": -0.18
                         },
                         {
-                            "groupId": 6,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": -0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2475,
+                            "z": -0.18000000000000002
                         },
                         {
-                            "groupId": 7,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.0682
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2475,
+                            "z": -2.7755575615628914e-17
                         },
                         {
-                            "groupId": 8,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": -0.241,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 9,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": 0.341
-                        },
-                        {
-                            "groupId": 10,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.2046
-                        },
-                        {
-                            "groupId": 11,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": -0.0682
-                        },
-                        {
-                            "groupId": 12,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.0682
-                        },
-                        {
-                            "groupId": 13,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.241,
-                            "z": 0.2046
-                        },
-                        {
-                            "groupId": 14,
-                            "grade": 2,
-                            "diameter": 0.032,
-                            "y": 0.0,
-                            "z": -0.341
+                            "groupId": 3,
+                            "grade": 3,
+                            "diameter": 0.025,
+                            "y": 0.2475,
+                            "z": 0.17999999999999997
                         }
                     ]
                 },
@@ -2112,25 +1524,30 @@
             ]
         },
         {
-            "name": "Concrete-filled steel pile",
+            "name": "Concrete-encased steel composite column",
             "components": [
                 {
-                    "material": "steel",
-                    "grade": "S355",
-                    "profile": "STD CHS 600 16"
-                },
-                {
                     "material": "concrete",
-                    "grade": "40 MPa",
-                    "profile": "STD C 568",
+                    "grade": "20 MPa",
+                    "profile": "STD C 600",
                     "reinforcement": {
-                        "cover": 0.0,
+                        "cover": 0.03,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
-                                "type": "CIRCLE",
-                                "position": "(0,0) 220 0 ",
-                                "description": "\"Grade 400\"20-148",
+                                "type": "LINK",
+                                "position": "",
+                                "description": "\"Grade 420\"10",
+                                "preload": {
+                                    "preloadType": "NONE",
+                                    "value": 0.0,
+                                    "exclude": true
+                                }
+                            },
+                            {
+                                "type": "PERIMETER",
+                                "position": "",
+                                "description": "\"Grade 420\"16-150",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -2139,6 +1556,11 @@
                             }
                         ]
                     }
+                },
+                {
+                    "material": "steel",
+                    "grade": "S355",
+                    "profile": "STD CHS(mm) 620 10"
                 }
             ],
             "tasks": [
@@ -2149,8 +1571,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -2161,10 +1583,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -2178,12 +1600,6 @@
                         "userDefinedStrainHigher": 0.0
                     },
                     "loadTerm": "SHORT",
-                    "creepCoefficients": [
-                        {
-                            "componentID": 2,
-                            "creepCoefficient": 0.0
-                        }
-                    ],
                     "componentActiveStates": [
                         {
                             "componentID": 1,
@@ -2193,66 +1609,52 @@
                             "componentID": 2,
                             "activeState": true
                         }
-                    ],
-                    "cases": [
-                        {
-                            "load": {}
-                        },
-                        {
-                            "load": {}
-                        },
-                        {
-                            "load": {}
-                        },
-                        {
-                            "load": {}
-                        }
                     ]
                 }
             ],
-            "rebarPercentage": 1.239833366395556,
+            "rebarPercentage": 0.7822205044534162,
             "extents": {
-                "yMin": -0.300967,
-                "yMax": 0.300967,
-                "zMin": 0.300967,
-                "zMax": -0.300967
+                "yMin": -0.31099884495450797,
+                "yMax": 0.31099884495450797,
+                "zMin": 0.31099884495450797,
+                "zMax": -0.31099884495450797
             },
             "properties": [
                 {
                     "analysis": {
-                        "area": 0.02935589286000012,
+                        "area": 0.28274395973200006,
                         "localAxis": {
-                            "iyy": 0.0012524511153440198,
-                            "izz": 0.0012524511153440198,
+                            "iyy": 0.006361805838530591,
+                            "izz": 0.006361805838530591,
                             "iyz": 0.0
                         },
                         "principalAxis": {
-                            "iuu": 0.0012524511153440198,
-                            "ivv": 0.0012524511153440198,
+                            "iuu": 0.006361805838530591,
+                            "ivv": 0.006361805838530591,
                             "angle": 0.0
                         },
                         "shear": {
-                            "ky": 0.5,
-                            "kz": 0.5
+                            "ky": 0.8571429,
+                            "kz": 0.8571429
                         },
                         "torsion": {
-                            "j": 0.002504807002882844
+                            "j": 0.012723450247038663
                         },
                         "elastic": {
-                            "zy": 0.0041614233963990065,
-                            "zz": 0.0041614233963990065
+                            "zy": 0.021137885012411962,
+                            "zz": 0.021137885012411962
                         },
                         "plastic": {
-                            "zpy": 0.00545841226049278,
-                            "zpz": 0.005458412260492785
+                            "zpy": 0.036000006502708036,
+                            "zpz": 0.036000006502708036
                         },
                         "centroid": {
-                            "cy": -1.4034552704948454e-16,
-                            "cz": 7.386606686814975e-18
+                            "cy": -4.601486830048655e-18,
+                            "cz": -1.5338289433495514e-18
                         },
                         "radiusOfGyration": {
-                            "ry": 0.20655358871681218,
-                            "rz": 0.20655358871681218
+                            "ry": 0.15000078686485574,
+                            "rz": 0.15000078686485574
                         },
                         "physical": {
                             "surfaceArea": 1.8879948944099962
@@ -2391,180 +1793,133 @@
                                     "z": -0.300967
                                 }
                             ]
+                        }
+                    ],
+                    "links": [
+                        {
+                            "grade": 3,
+                            "diameter": 0.01,
+                            "path": "M 0.003431 0.265459 A 0.035000 0.035000 0 0 1 -0.003431 0.265459 L -0.048424 0.261028 L -0.048424 0.261028 A 0.035000 0.035000 0 0 1 -0.055153 0.259689 L -0.098417 0.246565 L -0.098417 0.246565 A 0.035000 0.035000 0 0 1 -0.104756 0.243940 L -0.144629 0.222627 L -0.144629 0.222627 A 0.035000 0.035000 0 0 1 -0.150334 0.218815 L -0.185282 0.190134 L -0.185282 0.190134 A 0.035000 0.035000 0 0 1 -0.190134 0.185282 L -0.218815 0.150334 L -0.218815 0.150334 A 0.035000 0.035000 0 0 1 -0.222627 0.144629 L -0.243940 0.104756 L -0.243940 0.104756 A 0.035000 0.035000 0 0 1 -0.246565 0.098417 L -0.259689 0.055153 L -0.259689 0.055153 A 0.035000 0.035000 0 0 1 -0.261028 0.048424 L -0.265459 0.003431 L -0.265459 0.003431 A 0.035000 0.035000 0 0 1 -0.265459 -0.003431 L -0.261028 -0.048424 L -0.261028 -0.048424 A 0.035000 0.035000 0 0 1 -0.259689 -0.055153 L -0.246565 -0.098417 L -0.246565 -0.098417 A 0.035000 0.035000 0 0 1 -0.243940 -0.104756 L -0.222627 -0.144629 L -0.222627 -0.144629 A 0.035000 0.035000 0 0 1 -0.218815 -0.150334 L -0.190134 -0.185282 L -0.190134 -0.185282 A 0.035000 0.035000 0 0 1 -0.185282 -0.190134 L -0.150334 -0.218815 L -0.150334 -0.218815 A 0.035000 0.035000 0 0 1 -0.144629 -0.222627 L -0.104756 -0.243940 L -0.104756 -0.243940 A 0.035000 0.035000 0 0 1 -0.098417 -0.246565 L -0.055153 -0.259689 L -0.055153 -0.259689 A 0.035000 0.035000 0 0 1 -0.048424 -0.261028 L -0.003431 -0.265459 L -0.003431 -0.265459 A 0.035000 0.035000 0 0 1 0.003431 -0.265459 L 0.048424 -0.261028 L 0.048424 -0.261028 A 0.035000 0.035000 0 0 1 0.055153 -0.259689 L 0.098417 -0.246565 L 0.098417 -0.246565 A 0.035000 0.035000 0 0 1 0.104756 -0.243940 L 0.144629 -0.222627 L 0.144629 -0.222627 A 0.035000 0.035000 0 0 1 0.150334 -0.218815 L 0.185282 -0.190134 L 0.185282 -0.190134 A 0.035000 0.035000 0 0 1 0.190134 -0.185282 L 0.218815 -0.150334 L 0.218815 -0.150334 A 0.035000 0.035000 0 0 1 0.222627 -0.144629 L 0.243940 -0.104756 L 0.243940 -0.104756 A 0.035000 0.035000 0 0 1 0.246565 -0.098417 L 0.259689 -0.055153 L 0.259689 -0.055153 A 0.035000 0.035000 0 0 1 0.261028 -0.048424 L 0.265459 -0.003431 L 0.265459 -0.003431 A 0.035000 0.035000 0 0 1 0.265459 0.003431 L 0.261028 0.048424 L 0.261028 0.048424 A 0.035000 0.035000 0 0 1 0.259689 0.055153 L 0.246565 0.098417 L 0.246565 0.098417 A 0.035000 0.035000 0 0 1 0.243940 0.104756 L 0.222627 0.144629 L 0.222627 0.144629 A 0.035000 0.035000 0 0 1 0.218815 0.150334 L 0.190134 0.185282 L 0.190134 0.185282 A 0.035000 0.035000 0 0 1 0.185282 0.190134 L 0.150334 0.218815 L 0.150334 0.218815 A 0.035000 0.035000 0 0 1 0.144629 0.222627 L 0.104756 0.243940 L 0.104756 0.243940 A 0.035000 0.035000 0 0 1 0.098417 0.246565 L 0.055153 0.259689 L 0.055153 0.259689 A 0.035000 0.035000 0 0 1 0.048424 0.261028 L 0.003431 0.265459"
+                        }
+                    ],
+                    "bars": [
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 1.23628850459315e-17,
+                            "z": 0.252
                         },
                         {
-                            "isVoid": true,
-                            "points": [
-                                {
-                                    "y": -0.055584,
-                                    "z": -0.279441
-                                },
-                                {
-                                    "y": -0.109032,
-                                    "z": -0.263227
-                                },
-                                {
-                                    "y": -0.15829,
-                                    "z": -0.236898
-                                },
-                                {
-                                    "y": -0.201465,
-                                    "z": -0.201465
-                                },
-                                {
-                                    "y": -0.236898,
-                                    "z": -0.15829
-                                },
-                                {
-                                    "y": -0.263227,
-                                    "z": -0.109032
-                                },
-                                {
-                                    "y": -0.279441,
-                                    "z": -0.055584
-                                },
-                                {
-                                    "y": -0.284915,
-                                    "z": 0.0
-                                },
-                                {
-                                    "y": -0.279441,
-                                    "z": 0.055584
-                                },
-                                {
-                                    "y": -0.263227,
-                                    "z": 0.109032
-                                },
-                                {
-                                    "y": -0.236898,
-                                    "z": 0.15829
-                                },
-                                {
-                                    "y": -0.201465,
-                                    "z": 0.201465
-                                },
-                                {
-                                    "y": -0.15829,
-                                    "z": 0.236898
-                                },
-                                {
-                                    "y": -0.109032,
-                                    "z": 0.263227
-                                },
-                                {
-                                    "y": -0.055584,
-                                    "z": 0.279441
-                                },
-                                {
-                                    "y": 0.0,
-                                    "z": 0.284915
-                                },
-                                {
-                                    "y": 0.055584,
-                                    "z": 0.279441
-                                },
-                                {
-                                    "y": 0.109032,
-                                    "z": 0.263227
-                                },
-                                {
-                                    "y": 0.15829,
-                                    "z": 0.236898
-                                },
-                                {
-                                    "y": 0.201465,
-                                    "z": 0.201465
-                                },
-                                {
-                                    "y": 0.236898,
-                                    "z": 0.15829
-                                },
-                                {
-                                    "y": 0.263227,
-                                    "z": 0.109032
-                                },
-                                {
-                                    "y": 0.279441,
-                                    "z": 0.055584
-                                },
-                                {
-                                    "y": 0.284915,
-                                    "z": 0.0
-                                },
-                                {
-                                    "y": 0.279441,
-                                    "z": -0.055584
-                                },
-                                {
-                                    "y": 0.263227,
-                                    "z": -0.109032
-                                },
-                                {
-                                    "y": 0.236898,
-                                    "z": -0.15829
-                                },
-                                {
-                                    "y": 0.201465,
-                                    "z": -0.201465
-                                },
-                                {
-                                    "y": 0.15829,
-                                    "z": -0.236898
-                                },
-                                {
-                                    "y": 0.109032,
-                                    "z": -0.263227
-                                },
-                                {
-                                    "y": 0.055584,
-                                    "z": -0.279441
-                                },
-                                {
-                                    "y": 0.0,
-                                    "z": -0.284915
-                                }
-                            ]
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.13624148599881059,
+                            "z": 0.21199589027345764
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.22922726282933864,
+                            "z": 0.10468458327647535
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.24943500335399507,
+                            "z": -0.0358633392448678
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.1904488927372731,
+                            "z": -0.16502490495421182
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": -0.07099660432404029,
+                            "z": -0.24179222935085334
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.07099660432404019,
+                            "z": -0.24179222935085337
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.19044889273727297,
+                            "z": -0.16502490495421196
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.24943500335399504,
+                            "z": -0.0358633392448679
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.22922726282933867,
+                            "z": 0.10468458327647527
+                        },
+                        {
+                            "groupId": 1,
+                            "grade": 3,
+                            "diameter": 0.016,
+                            "y": 0.13624148599881059,
+                            "z": 0.21199589027345767
                         }
                     ]
                 },
                 {
                     "analysis": {
-                        "area": 0.2533882970679384,
+                        "area": 0.01916371518689758,
                         "localAxis": {
-                            "iyy": 0.005109364006577885,
-                            "izz": 0.005109364006577886,
-                            "iyz": 0.0
+                            "iyy": 0.0008915992452919724,
+                            "izz": 0.0008915992452919706,
+                            "iyz": -0.0
                         },
                         "principalAxis": {
-                            "iuu": 0.005109364006577886,
-                            "ivv": 0.005109364006577886,
+                            "iuu": 0.0008915992452919724,
+                            "ivv": 0.0008915992452919706,
                             "angle": 0.0
                         },
                         "shear": {
-                            "ky": 0.8571429,
-                            "kz": 0.8571429
+                            "ky": 0.5,
+                            "kz": 0.5
                         },
                         "torsion": {
-                            "j": 0.010218643244155824
+                            "j": 0.0017831836981408347
                         },
                         "elastic": {
-                            "zy": 0.01793293696654156,
-                            "zz": 0.017932936966541562
+                            "zy": 0.002866889249773236,
+                            "zz": 0.002866889249773231
                         },
                         "plastic": {
-                            "zpy": 0.03054164380248741,
-                            "zpz": 0.030541643802487414
+                            "zpy": 0.0037213217746844703,
+                            "zpz": 0.003721321774684472
                         },
                         "centroid": {
-                            "cy": 7.487929883916125e-18,
-                            "cz": 6.8461073224376e-18
+                            "cy": -9.476443482915377e-17,
+                            "cz": -2.2630312795021794e-17
                         },
                         "radiusOfGyration": {
-                            "ry": 0.14200058898098022,
-                            "rz": 0.14200058898098025
+                            "ry": 0.21569744075730957,
+                            "rz": 0.21569744075730937
                         },
                         "physical": {
-                            "surfaceArea": 1.7872998708891639
+                            "surfaceArea": 1.950925915407184
                         }
                     },
                     "paths": [
@@ -2573,206 +1928,266 @@
                             "points": [
                                 {
                                     "y": -0.0,
-                                    "z": 0.28491507086154927
+                                    "z": 0.31099884495450797
                                 },
                                 {
-                                    "y": -0.05558417292162764,
-                                    "z": 0.2794405076660509
+                                    "y": -0.0606728648088189,
+                                    "z": 0.30502308935378786
                                 },
                                 {
-                                    "y": -0.10903227724984045,
-                                    "z": 0.26322720247298825
+                                    "y": -0.11901410544876949,
+                                    "z": 0.287325467488121
                                 },
                                 {
-                                    "y": -0.1582903323093474,
-                                    "z": 0.2368982235084046
+                                    "y": -0.17278170076020313,
+                                    "z": 0.2585860890408641
                                 },
                                 {
-                                    "y": -0.20146537866844721,
-                                    "z": 0.20146537866844721
+                                    "y": -0.2199093922085163,
+                                    "z": 0.2199093922085163
                                 },
                                 {
-                                    "y": -0.2368982235084046,
-                                    "z": 0.15829033230934741
+                                    "y": -0.2585860890408641,
+                                    "z": 0.17278170076020316
                                 },
                                 {
-                                    "y": -0.26322720247298825,
-                                    "z": 0.10903227724984046
+                                    "y": -0.287325467488121,
+                                    "z": 0.11901410544876952
                                 },
                                 {
-                                    "y": -0.2794405076660509,
-                                    "z": 0.05558417292162767
+                                    "y": -0.30502308935378786,
+                                    "z": 0.06067286480881893
                                 },
                                 {
-                                    "y": -0.28491507086154927,
+                                    "y": -0.31099884495450797,
                                     "z": -0.0
                                 },
                                 {
-                                    "y": -0.2794405076660509,
-                                    "z": -0.05558417292162764
+                                    "y": -0.30502308935378786,
+                                    "z": -0.0606728648088189
                                 },
                                 {
-                                    "y": -0.26322720247298825,
-                                    "z": -0.10903227724984045
+                                    "y": -0.287325467488121,
+                                    "z": -0.11901410544876949
                                 },
                                 {
-                                    "y": -0.2368982235084046,
-                                    "z": -0.1582903323093474
+                                    "y": -0.2585860890408641,
+                                    "z": -0.17278170076020313
                                 },
                                 {
-                                    "y": -0.20146537866844721,
-                                    "z": -0.20146537866844721
+                                    "y": -0.2199093922085163,
+                                    "z": -0.2199093922085163
                                 },
                                 {
-                                    "y": -0.15829033230934741,
-                                    "z": -0.2368982235084046
+                                    "y": -0.17278170076020316,
+                                    "z": -0.2585860890408641
                                 },
                                 {
-                                    "y": -0.10903227724984046,
-                                    "z": -0.26322720247298825
+                                    "y": -0.11901410544876952,
+                                    "z": -0.287325467488121
                                 },
                                 {
-                                    "y": -0.05558417292162767,
-                                    "z": -0.2794405076660509
+                                    "y": -0.06067286480881893,
+                                    "z": -0.30502308935378786
                                 },
                                 {
                                     "y": 0.0,
-                                    "z": -0.28491507086154927
+                                    "z": -0.31099884495450797
                                 },
                                 {
-                                    "y": 0.05558417292162764,
-                                    "z": -0.2794405076660509
+                                    "y": 0.0606728648088189,
+                                    "z": -0.30502308935378786
                                 },
                                 {
-                                    "y": 0.10903227724984045,
-                                    "z": -0.26322720247298825
+                                    "y": 0.11901410544876949,
+                                    "z": -0.287325467488121
                                 },
                                 {
-                                    "y": 0.1582903323093474,
-                                    "z": -0.2368982235084046
+                                    "y": 0.17278170076020313,
+                                    "z": -0.2585860890408641
                                 },
                                 {
-                                    "y": 0.20146537866844721,
-                                    "z": -0.20146537866844721
+                                    "y": 0.2199093922085163,
+                                    "z": -0.2199093922085163
                                 },
                                 {
-                                    "y": 0.2368982235084046,
-                                    "z": -0.15829033230934741
+                                    "y": 0.2585860890408641,
+                                    "z": -0.17278170076020316
                                 },
                                 {
-                                    "y": 0.26322720247298825,
-                                    "z": -0.10903227724984046
+                                    "y": 0.287325467488121,
+                                    "z": -0.11901410544876952
                                 },
                                 {
-                                    "y": 0.2794405076660509,
-                                    "z": -0.05558417292162767
+                                    "y": 0.30502308935378786,
+                                    "z": -0.06067286480881893
                                 },
                                 {
-                                    "y": 0.28491507086154927,
+                                    "y": 0.31099884495450797,
                                     "z": 0.0
                                 },
                                 {
-                                    "y": 0.2794405076660509,
-                                    "z": 0.05558417292162764
+                                    "y": 0.30502308935378786,
+                                    "z": 0.0606728648088189
                                 },
                                 {
-                                    "y": 0.26322720247298825,
-                                    "z": 0.10903227724984045
+                                    "y": 0.287325467488121,
+                                    "z": 0.11901410544876949
                                 },
                                 {
-                                    "y": 0.2368982235084046,
-                                    "z": 0.1582903323093474
+                                    "y": 0.2585860890408641,
+                                    "z": 0.17278170076020313
                                 },
                                 {
-                                    "y": 0.20146537866844721,
-                                    "z": 0.20146537866844721
+                                    "y": 0.2199093922085163,
+                                    "z": 0.2199093922085163
                                 },
                                 {
-                                    "y": 0.15829033230934741,
-                                    "z": 0.2368982235084046
+                                    "y": 0.17278170076020316,
+                                    "z": 0.2585860890408641
                                 },
                                 {
-                                    "y": 0.10903227724984046,
-                                    "z": 0.26322720247298825
+                                    "y": 0.11901410544876952,
+                                    "z": 0.287325467488121
                                 },
                                 {
-                                    "y": 0.05558417292162767,
-                                    "z": 0.2794405076660509
+                                    "y": 0.06067286480881893,
+                                    "z": 0.30502308935378786
                                 }
                             ]
-                        }
-                    ],
-                    "links": [],
-                    "bars": [
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": 0.22,
-                            "z": -6.8461073224376e-18
                         },
                         {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": 0.17798373876248844,
-                            "z": 0.1293127555043441
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": 0.06798373876248842,
-                            "z": 0.2092324335849338
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": -0.06798373876248844,
-                            "z": 0.2092324335849338
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": -0.1779837387624884,
-                            "z": 0.12931275550434412
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": -0.22,
-                            "z": 2.0096122258804168e-17
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": -0.17798373876248844,
-                            "z": -0.12931275550434407
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": -0.06798373876248848,
-                            "z": -0.2092324335849338
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": 0.06798373876248838,
-                            "z": -0.2092324335849338
-                        },
-                        {
-                            "groupId": 0,
-                            "grade": 2,
-                            "diameter": 0.02,
-                            "y": 0.1779837387624884,
-                            "z": -0.12931275550434415
+                            "isVoid": true,
+                            "points": [
+                                {
+                                    "y": 0.058715675621437674,
+                                    "z": 0.2951836348585044
+                                },
+                                {
+                                    "y": 0.11517494075687372,
+                                    "z": 0.2780569040207622
+                                },
+                                {
+                                    "y": 0.16720809750987403,
+                                    "z": 0.2502446022976105
+                                },
+                                {
+                                    "y": 0.21281554084695126,
+                                    "z": 0.21281554084695126
+                                },
+                                {
+                                    "y": 0.2502446022976105,
+                                    "z": 0.167208097509874
+                                },
+                                {
+                                    "y": 0.2780569040207622,
+                                    "z": 0.1151749407568737
+                                },
+                                {
+                                    "y": 0.2951836348585044,
+                                    "z": 0.058715675621437646
+                                },
+                                {
+                                    "y": 0.30096662414952385,
+                                    "z": 0.0
+                                },
+                                {
+                                    "y": 0.2951836348585044,
+                                    "z": -0.058715675621437674
+                                },
+                                {
+                                    "y": 0.2780569040207622,
+                                    "z": -0.11517494075687372
+                                },
+                                {
+                                    "y": 0.2502446022976105,
+                                    "z": -0.16720809750987403
+                                },
+                                {
+                                    "y": 0.21281554084695126,
+                                    "z": -0.21281554084695126
+                                },
+                                {
+                                    "y": 0.167208097509874,
+                                    "z": -0.2502446022976105
+                                },
+                                {
+                                    "y": 0.1151749407568737,
+                                    "z": -0.2780569040207622
+                                },
+                                {
+                                    "y": 0.058715675621437646,
+                                    "z": -0.2951836348585044
+                                },
+                                {
+                                    "y": 0.0,
+                                    "z": -0.30096662414952385
+                                },
+                                {
+                                    "y": -0.058715675621437674,
+                                    "z": -0.2951836348585044
+                                },
+                                {
+                                    "y": -0.11517494075687372,
+                                    "z": -0.2780569040207622
+                                },
+                                {
+                                    "y": -0.16720809750987403,
+                                    "z": -0.2502446022976105
+                                },
+                                {
+                                    "y": -0.21281554084695126,
+                                    "z": -0.21281554084695126
+                                },
+                                {
+                                    "y": -0.2502446022976105,
+                                    "z": -0.167208097509874
+                                },
+                                {
+                                    "y": -0.2780569040207622,
+                                    "z": -0.1151749407568737
+                                },
+                                {
+                                    "y": -0.2951836348585044,
+                                    "z": -0.058715675621437646
+                                },
+                                {
+                                    "y": -0.30096662414952385,
+                                    "z": -0.0
+                                },
+                                {
+                                    "y": -0.2951836348585044,
+                                    "z": 0.058715675621437674
+                                },
+                                {
+                                    "y": -0.2780569040207622,
+                                    "z": 0.11517494075687372
+                                },
+                                {
+                                    "y": -0.2502446022976105,
+                                    "z": 0.16720809750987403
+                                },
+                                {
+                                    "y": -0.21281554084695126,
+                                    "z": 0.21281554084695126
+                                },
+                                {
+                                    "y": -0.167208097509874,
+                                    "z": 0.2502446022976105
+                                },
+                                {
+                                    "y": -0.1151749407568737,
+                                    "z": 0.2780569040207622
+                                },
+                                {
+                                    "y": -0.058715675621437646,
+                                    "z": 0.2951836348585044
+                                },
+                                {
+                                    "y": -0.0,
+                                    "z": 0.30096662414952385
+                                }
+                            ]
                         }
                     ]
                 }
@@ -2815,7 +2230,7 @@
                 {
                     "material": "steel",
                     "grade": "S355",
-                    "profile": "CAT BSI-HE HE160C 20170901"
+                    "profile": "CAT HE HE.DILx140 19920101"
                 }
             ],
             "tasks": [
@@ -2826,8 +2241,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -2838,10 +2253,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -2867,7 +2282,7 @@
                     ]
                 }
             ],
-            "rebarPercentage": 1.5825382898531943,
+            "rebarPercentage": 1.547289911792265,
             "extents": {
                 "yMin": -0.2,
                 "yMax": 0.2,
@@ -2877,15 +2292,15 @@
             "properties": [
                 {
                     "analysis": {
-                        "area": 0.15246033372000004,
+                        "area": 0.15593348987600003,
                         "localAxis": {
-                            "iyy": 0.0020962745109955336,
-                            "izz": 0.0021203089329148326,
-                            "iyz": 1.471683893641326e-21
+                            "iyy": 0.002118492796121517,
+                            "izz": 0.002127840005617556,
+                            "iyz": 5.723515095142116e-22
                         },
                         "principalAxis": {
-                            "iuu": 0.0021203089329148326,
-                            "ivv": 0.0020962745109955336,
+                            "iuu": 0.002127840005617556,
+                            "ivv": 0.002118492796121517,
                             "angle": -1.5707963267948966
                         },
                         "shear": {
@@ -2896,20 +2311,20 @@
                             "j": 0.0036053332480000012
                         },
                         "elastic": {
-                            "zy": 0.010481372554977667,
-                            "zz": 0.010601544664574162
+                            "zy": 0.010592463980607583,
+                            "zz": 0.01063920002808778
                         },
                         "plastic": {
-                            "zpy": 0.0154920812082514,
-                            "zpz": 0.015755066486448623
+                            "zpy": 0.01576114642002142,
+                            "zpz": 0.015881014717476598
                         },
                         "centroid": {
-                            "cy": -1.3333822797107283e-19,
-                            "cz": -4.4446075990357613e-20
+                            "cy": -2.1728057210234182e-20,
+                            "cz": -1.7382445768187345e-19
                         },
                         "radiusOfGyration": {
-                            "ry": 0.11725885357228592,
-                            "rz": 0.11792914191148968
+                            "ry": 0.11655845881995451,
+                            "rz": 0.11681531530081848
                         },
                         "physical": {
                             "surfaceArea": 1.6
@@ -2941,180 +2356,180 @@
                             "isVoid": true,
                             "points": [
                                 {
-                                    "y": -0.0815,
-                                    "z": -0.085
+                                    "y": -0.07,
+                                    "z": -0.07
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": -0.067
+                                    "y": -0.07,
+                                    "z": -0.058
                                 },
                                 {
-                                    "y": -0.0205,
-                                    "z": -0.067
+                                    "y": -0.0145,
+                                    "z": -0.058
                                 },
                                 {
-                                    "y": -0.017574,
-                                    "z": -0.066712
+                                    "y": -0.012159,
+                                    "z": -0.057769
                                 },
                                 {
-                                    "y": -0.01476,
-                                    "z": -0.065858
+                                    "y": -0.009908,
+                                    "z": -0.057087
                                 },
                                 {
-                                    "y": -0.012166,
-                                    "z": -0.064472
+                                    "y": -0.007833,
+                                    "z": -0.055978
                                 },
                                 {
-                                    "y": -0.009893,
-                                    "z": -0.062607
+                                    "y": -0.006015,
+                                    "z": -0.054485
                                 },
                                 {
-                                    "y": -0.008028,
-                                    "z": -0.060334
+                                    "y": -0.004522,
+                                    "z": -0.052667
                                 },
                                 {
-                                    "y": -0.006642,
-                                    "z": -0.05774
+                                    "y": -0.003413,
+                                    "z": -0.050592
                                 },
                                 {
-                                    "y": -0.005788,
-                                    "z": -0.054926
+                                    "y": -0.002731,
+                                    "z": -0.048341
                                 },
                                 {
-                                    "y": -0.0055,
-                                    "z": -0.052
+                                    "y": -0.0025,
+                                    "z": -0.046
                                 },
                                 {
-                                    "y": -0.0055,
-                                    "z": 0.052
+                                    "y": -0.0025,
+                                    "z": 0.046
                                 },
                                 {
-                                    "y": -0.005788,
-                                    "z": 0.054926
+                                    "y": -0.002731,
+                                    "z": 0.048341
                                 },
                                 {
-                                    "y": -0.006642,
-                                    "z": 0.05774
+                                    "y": -0.003413,
+                                    "z": 0.050592
                                 },
                                 {
-                                    "y": -0.008028,
-                                    "z": 0.060334
+                                    "y": -0.004522,
+                                    "z": 0.052667
                                 },
                                 {
-                                    "y": -0.009893,
-                                    "z": 0.062607
+                                    "y": -0.006015,
+                                    "z": 0.054485
                                 },
                                 {
-                                    "y": -0.012166,
-                                    "z": 0.064472
+                                    "y": -0.007833,
+                                    "z": 0.055978
                                 },
                                 {
-                                    "y": -0.01476,
-                                    "z": 0.065858
+                                    "y": -0.009908,
+                                    "z": 0.057087
                                 },
                                 {
-                                    "y": -0.017574,
-                                    "z": 0.066712
+                                    "y": -0.012159,
+                                    "z": 0.057769
                                 },
                                 {
-                                    "y": -0.0205,
-                                    "z": 0.067
+                                    "y": -0.0145,
+                                    "z": 0.058
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": 0.067
+                                    "y": -0.07,
+                                    "z": 0.058
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": 0.085
+                                    "y": -0.07,
+                                    "z": 0.07
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": 0.085
+                                    "y": 0.07,
+                                    "z": 0.07
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": 0.067
+                                    "y": 0.07,
+                                    "z": 0.058
                                 },
                                 {
-                                    "y": 0.0205,
-                                    "z": 0.067
+                                    "y": 0.0145,
+                                    "z": 0.058
                                 },
                                 {
-                                    "y": 0.017574,
-                                    "z": 0.066712
+                                    "y": 0.012159,
+                                    "z": 0.057769
                                 },
                                 {
-                                    "y": 0.01476,
-                                    "z": 0.065858
+                                    "y": 0.009908,
+                                    "z": 0.057087
                                 },
                                 {
-                                    "y": 0.012166,
-                                    "z": 0.064472
+                                    "y": 0.007833,
+                                    "z": 0.055978
                                 },
                                 {
-                                    "y": 0.009893,
-                                    "z": 0.062607
+                                    "y": 0.006015,
+                                    "z": 0.054485
                                 },
                                 {
-                                    "y": 0.008028,
-                                    "z": 0.060334
+                                    "y": 0.004522,
+                                    "z": 0.052667
                                 },
                                 {
-                                    "y": 0.006642,
-                                    "z": 0.05774
+                                    "y": 0.003413,
+                                    "z": 0.050592
                                 },
                                 {
-                                    "y": 0.005788,
-                                    "z": 0.054926
+                                    "y": 0.002731,
+                                    "z": 0.048341
                                 },
                                 {
-                                    "y": 0.0055,
-                                    "z": 0.052
+                                    "y": 0.0025,
+                                    "z": 0.046
                                 },
                                 {
-                                    "y": 0.0055,
-                                    "z": -0.052
+                                    "y": 0.0025,
+                                    "z": -0.046
                                 },
                                 {
-                                    "y": 0.005788,
-                                    "z": -0.054926
+                                    "y": 0.002731,
+                                    "z": -0.048341
                                 },
                                 {
-                                    "y": 0.006642,
-                                    "z": -0.05774
+                                    "y": 0.003413,
+                                    "z": -0.050592
                                 },
                                 {
-                                    "y": 0.008028,
-                                    "z": -0.060334
+                                    "y": 0.004522,
+                                    "z": -0.052667
                                 },
                                 {
-                                    "y": 0.009893,
-                                    "z": -0.062607
+                                    "y": 0.006015,
+                                    "z": -0.054485
                                 },
                                 {
-                                    "y": 0.012166,
-                                    "z": -0.064472
+                                    "y": 0.007833,
+                                    "z": -0.055978
                                 },
                                 {
-                                    "y": 0.01476,
-                                    "z": -0.065858
+                                    "y": 0.009908,
+                                    "z": -0.057087
                                 },
                                 {
-                                    "y": 0.017574,
-                                    "z": -0.066712
+                                    "y": 0.012159,
+                                    "z": -0.057769
                                 },
                                 {
-                                    "y": 0.0205,
-                                    "z": -0.067
+                                    "y": 0.0145,
+                                    "z": -0.058
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": -0.067
+                                    "y": 0.07,
+                                    "z": -0.058
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": -0.085
+                                    "y": 0.07,
+                                    "z": -0.07
                                 }
                             ]
                         }
@@ -3215,42 +2630,42 @@
                 },
                 {
                     "analysis": {
-                        "area": 0.00754,
+                        "area": 0.00406361,
                         "localAxis": {
-                            "iyy": 0.00003704,
-                            "izz": 0.00001302,
+                            "iyy": 0.0000148322,
+                            "izz": 0.00000549315,
                             "iyz": 0.0
                         },
                         "principalAxis": {
-                            "iuu": 0.00003704,
-                            "ivv": 0.00001302,
+                            "iuu": 0.0000148322,
+                            "ivv": 0.00000549315,
                             "angle": 0.0
                         },
                         "shear": {
-                            "ky": 0.648541088116711,
-                            "kz": 0.20295661764759412
+                            "ky": 0.6890424740563197,
+                            "kz": 0.1474856927970484
                         },
                         "torsion": {
-                            "j": 7.87e-7
+                            "j": 1.78086e-7
                         },
                         "elastic": {
-                            "zy": 0.0004358,
-                            "zz": 0.0001598
+                            "zy": 0.000211888,
+                            "zz": 0.0000784735
                         },
                         "plastic": {
-                            "zpy": 0.0005076,
-                            "zpz": 0.0002449
+                            "zpy": 0.000238698,
+                            "zpz": 0.000118965
                         },
                         "centroid": {
                             "cy": 0.0,
                             "cz": 0.0
                         },
                         "radiusOfGyration": {
-                            "ry": 0.0700889923133535,
-                            "rz": 0.041554668220651
+                            "ry": 0.060415277728694435,
+                            "rz": 0.03676670571592021
                         },
                         "physical": {
-                            "surfaceArea": 0.944
+                            "surfaceArea": 0.8093983
                         }
                     },
                     "paths": [
@@ -3258,180 +2673,180 @@
                             "isVoid": false,
                             "points": [
                                 {
-                                    "y": -0.0815,
-                                    "z": 0.085
+                                    "y": -0.07,
+                                    "z": 0.07
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": 0.067
+                                    "y": -0.07,
+                                    "z": 0.05800000000000001
                                 },
                                 {
-                                    "y": -0.0205,
-                                    "z": 0.067
+                                    "y": -0.014500000000000002,
+                                    "z": 0.05800000000000001
                                 },
                                 {
-                                    "y": -0.017573645169758078,
-                                    "z": 0.06671177920604845
+                                    "y": -0.012158916135806464,
+                                    "z": 0.05776942336483878
                                 },
                                 {
-                                    "y": -0.014759748514523658,
-                                    "z": 0.0658581929876693
+                                    "y": -0.009907798811618927,
+                                    "z": 0.057086554390135456
                                 },
                                 {
-                                    "y": -0.01216644650470597,
-                                    "z": 0.06447204418453818
+                                    "y": -0.007833157203764778,
+                                    "z": 0.05597763534763056
                                 },
                                 {
-                                    "y": -0.009893398282201793,
-                                    "z": 0.06260660171779822
+                                    "y": -0.0060147186257614345,
+                                    "z": 0.05448528137423859
                                 },
                                 {
-                                    "y": -0.008027955815461826,
-                                    "z": 0.06033355349529404
+                                    "y": -0.0045223646523694615,
+                                    "z": 0.05266684279623524
                                 },
                                 {
-                                    "y": -0.006641807012330704,
-                                    "z": 0.05774025148547635
+                                    "y": -0.0034134456098645627,
+                                    "z": 0.05059220118838109
                                 },
                                 {
-                                    "y": -0.005788220793951549,
-                                    "z": 0.05492635483024193
+                                    "y": -0.002730576635161238,
+                                    "z": 0.04834108386419356
                                 },
                                 {
-                                    "y": -0.005500000000000007,
-                                    "z": 0.052000000000000005
+                                    "y": -0.0025000000000000022,
+                                    "z": 0.04600000000000002
                                 },
                                 {
-                                    "y": -0.0055000000000000005,
-                                    "z": -0.052000000000000005
+                                    "y": -0.0025000000000000005,
+                                    "z": -0.046000000000000006
                                 },
                                 {
-                                    "y": -0.005788220793951545,
-                                    "z": -0.05492635483024193
+                                    "y": -0.0027305766351612346,
+                                    "z": -0.04834108386419354
                                 },
                                 {
-                                    "y": -0.0066418070123307,
-                                    "z": -0.057740251485476346
+                                    "y": -0.0034134456098645575,
+                                    "z": -0.05059220118838108
                                 },
                                 {
-                                    "y": -0.008027955815461823,
-                                    "z": -0.06033355349529403
+                                    "y": -0.0045223646523694545,
+                                    "z": -0.05266684279623523
                                 },
                                 {
-                                    "y": -0.009893398282201787,
-                                    "z": -0.06260660171779821
+                                    "y": -0.006014718625761426,
+                                    "z": -0.054485281374238574
                                 },
                                 {
-                                    "y": -0.012166446504705965,
-                                    "z": -0.06447204418453817
+                                    "y": -0.00783315720376477,
+                                    "z": -0.05597763534763055
                                 },
                                 {
-                                    "y": -0.014759748514523649,
-                                    "z": -0.06585819298766929
+                                    "y": -0.009907798811618919,
+                                    "z": -0.05708655439013545
                                 },
                                 {
-                                    "y": -0.017573645169758068,
-                                    "z": -0.06671177920604844
+                                    "y": -0.012158916135806457,
+                                    "z": -0.05776942336483877
                                 },
                                 {
-                                    "y": -0.020499999999999987,
-                                    "z": -0.06699999999999999
+                                    "y": -0.014499999999999996,
+                                    "z": -0.05800000000000001
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": -0.067
+                                    "y": -0.07,
+                                    "z": -0.05800000000000001
                                 },
                                 {
-                                    "y": -0.0815,
-                                    "z": -0.085
+                                    "y": -0.07,
+                                    "z": -0.07
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": -0.085
+                                    "y": 0.07,
+                                    "z": -0.07
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": -0.067
+                                    "y": 0.07,
+                                    "z": -0.05800000000000001
                                 },
                                 {
-                                    "y": 0.0205,
-                                    "z": -0.067
+                                    "y": 0.014500000000000002,
+                                    "z": -0.05800000000000001
                                 },
                                 {
-                                    "y": 0.017573645169758078,
-                                    "z": -0.06671177920604845
+                                    "y": 0.012158916135806464,
+                                    "z": -0.05776942336483878
                                 },
                                 {
-                                    "y": 0.014759748514523658,
-                                    "z": -0.0658581929876693
+                                    "y": 0.009907798811618927,
+                                    "z": -0.057086554390135456
                                 },
                                 {
-                                    "y": 0.01216644650470597,
-                                    "z": -0.06447204418453818
+                                    "y": 0.007833157203764778,
+                                    "z": -0.05597763534763056
                                 },
                                 {
-                                    "y": 0.009893398282201793,
-                                    "z": -0.06260660171779822
+                                    "y": 0.0060147186257614345,
+                                    "z": -0.05448528137423859
                                 },
                                 {
-                                    "y": 0.008027955815461826,
-                                    "z": -0.06033355349529404
+                                    "y": 0.0045223646523694615,
+                                    "z": -0.05266684279623524
                                 },
                                 {
-                                    "y": 0.006641807012330704,
-                                    "z": -0.05774025148547635
+                                    "y": 0.0034134456098645627,
+                                    "z": -0.05059220118838109
                                 },
                                 {
-                                    "y": 0.005788220793951549,
-                                    "z": -0.05492635483024193
+                                    "y": 0.002730576635161238,
+                                    "z": -0.04834108386419356
                                 },
                                 {
-                                    "y": 0.005500000000000007,
-                                    "z": -0.052000000000000005
+                                    "y": 0.0025000000000000022,
+                                    "z": -0.04600000000000002
                                 },
                                 {
-                                    "y": 0.0055000000000000005,
-                                    "z": 0.052000000000000005
+                                    "y": 0.0025000000000000005,
+                                    "z": 0.046000000000000006
                                 },
                                 {
-                                    "y": 0.005788220793951545,
-                                    "z": 0.05492635483024193
+                                    "y": 0.0027305766351612346,
+                                    "z": 0.04834108386419354
                                 },
                                 {
-                                    "y": 0.0066418070123307,
-                                    "z": 0.057740251485476346
+                                    "y": 0.0034134456098645575,
+                                    "z": 0.05059220118838108
                                 },
                                 {
-                                    "y": 0.008027955815461823,
-                                    "z": 0.06033355349529403
+                                    "y": 0.0045223646523694545,
+                                    "z": 0.05266684279623523
                                 },
                                 {
-                                    "y": 0.009893398282201787,
-                                    "z": 0.06260660171779821
+                                    "y": 0.006014718625761426,
+                                    "z": 0.054485281374238574
                                 },
                                 {
-                                    "y": 0.012166446504705965,
-                                    "z": 0.06447204418453817
+                                    "y": 0.00783315720376477,
+                                    "z": 0.05597763534763055
                                 },
                                 {
-                                    "y": 0.014759748514523649,
-                                    "z": 0.06585819298766929
+                                    "y": 0.009907798811618919,
+                                    "z": 0.05708655439013545
                                 },
                                 {
-                                    "y": 0.017573645169758068,
-                                    "z": 0.06671177920604844
+                                    "y": 0.012158916135806457,
+                                    "z": 0.05776942336483877
                                 },
                                 {
-                                    "y": 0.020499999999999987,
-                                    "z": 0.06699999999999999
+                                    "y": 0.014499999999999996,
+                                    "z": 0.05800000000000001
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": 0.067
+                                    "y": 0.07,
+                                    "z": 0.05800000000000001
                                 },
                                 {
-                                    "y": 0.0815,
-                                    "z": 0.085
+                                    "y": 0.07,
+                                    "z": 0.07
                                 }
                             ]
                         }

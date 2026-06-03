@@ -9,21 +9,20 @@
         "FullVersion": "10.1.0.32535"
     },
     "titles": {
-        "jobTitle": "U-girder section",
-        "dateSaved": "07-Jun-2025"
+        "jobTitle": "U-girder"
     },
     "modelId": {
-        "modelId": "688db41d-903d-47cb-adcb-2d36a1444beb",
-        "parentModelId": "fd8a44e8-5e73-4ded-9030-96f1ee89ea28",
-        "rootModelId": "450adfe7-a5f1-45cb-96e0-19d029db1447"
+        "modelId": "75564bd9-d45f-4d73-ae6b-4e3fc3e399e3",
+        "parentModelId": "f6b68bd3-3491-426a-b09a-97cf192d80aa",
+        "rootModelId": "5d3ed18f-5eb2-498f-9e3d-baa556e5b765"
     },
     "units": {
         "force": "kN",
-        "length": "m",
+        "length": "mm",
         "sectionDims": "mm",
         "stress": "N/mm²",
         "mass": "t",
-        "strain": "ε",
+        "strain": "‰",
         "temperature": "°C"
     },
     "codes": {
@@ -36,8 +35,8 @@
                 "strength": 30000000.0,
                 "elasticModulus": 32836568031.33079,
                 "density": 2400.0,
-                "coefficientOfThermalExpansion": 0.000009999999747378752,
-                "poissonsRatio": 0.20000000298023224,
+                "coefficientOfThermalExpansion": 0.00001,
+                "poissonsRatio": 0.2,
                 "ULS": {
                     "gammaF": 1.5,
                     "gammaE": 1.0,
@@ -47,8 +46,8 @@
                     },
                     "compression": {
                         "model": "RECT_PARABOLA",
-                        "plasticStrainLimit": 0.0020000000949949026,
-                        "failureStrain": 0.0035000001080334187
+                        "plasticStrainLimit": 0.002,
+                        "failureStrain": 0.0035
                     }
                 },
                 "SLS": {
@@ -62,8 +61,8 @@
                     },
                     "compression": {
                         "model": "FIB_SCHEMATIC",
-                        "plasticStrainLimit": 0.0021618769969791174,
-                        "failureStrain": 0.0035000001080334187
+                        "plasticStrainLimit": 0.0021618768697354803,
+                        "failureStrain": 0.0035
                     }
                 },
                 "type": "Normal weight concrete",
@@ -73,44 +72,45 @@
         ],
         "reinforcement": [
             {
-                "name": "500B modified-10041",
+                "name": "500B",
                 "strength": 500000000.0,
-                "elasticModulus": 199999995904.0,
+                "elasticModulus": 200000000000.0,
                 "density": 7850.0,
-                "coefficientOfThermalExpansion": 0.000012000000424450263,
-                "poissonsRatio": 0.30000001192092896,
+                "coefficientOfThermalExpansion": 0.000012,
+                "poissonsRatio": 0.3,
                 "ULS": {
-                    "gammaF": 1.149999976158142,
+                    "gammaF": 1.15,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002173913133069677,
-                        "failureStrain": 0.05000000074505806
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002173913133069677,
-                        "failureStrain": 0.05000000074505806
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.002173913043478261,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "SLS": {
                     "gammaF": 1.0,
                     "gammaE": 1.0,
                     "tension": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002500000051200001,
-                        "failureStrain": 0.05000000074505806
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     },
                     "compression": {
-                        "model": "ELAS_PLAS",
-                        "yieldStrain": 0.002500000051200001,
-                        "failureStrain": 0.05000000074505806
+                        "model": "ELAS_HARD",
+                        "yieldStrain": 0.0025,
+                        "failureStrain": 0.045000000000000005
                     }
                 },
                 "type": "Steel rebar",
-                "ultimateStrain": 0.05000000074505806,
-                "hardeningModulus": 0.0,
-                "hardeningParameter": 1.0,
+                "label": "B",
+                "ultimateStrain": 0.05,
+                "hardeningModulus": 727272727.272728,
+                "hardeningParameter": 1.08,
                 "ductility": "NORMAL"
             }
         ]
@@ -122,385 +122,15 @@
                 {
                     "material": "concrete",
                     "grade": "C30/37",
-                    "profile": "GEO P(mm) M(-730.|0.) L(-750.|20.) L(-1048.2|2150.) L(-1008.2|2150.) L(-1008.2|2200.) L(-674.|2200.) L(-674.|2150.) L(-634.|2150.) L(-634.|2070.) L(-772.|1794.) L(-772.|1410.) L(-625.|360.) L(-500.|210.) L(500.|210.) L(625.|360.) L(772.|1410.) L(772.|1794.) L(634.|2070.) L(634.|2150.) L(674.|2150.) L(674.|2200.) L(1008.2|2200.) L(1008.2|2150.) L(1048.2|2150.) L(750.|20.) L(730.|0.)",
+                    "profile": "GEO P(mm) M(-730|0) L(-750|20) L(-1048.2|2150) L(-1008.2|2150) L(-1008.2|2200) L(-674|2200) L(-674|2150) L(-634|2150) L(-634|2070) L(-772|1794) L(-772|1410) L(-625|360) L(-500|210) L(500|210) L(625|360) L(772|1410) L(772|1794) L(634|2070) L(634|2150) L(674|2150) L(674|2200) L(1008.2|2200) L(1008.2|2150) L(1048.2|2150) L(750|20) L(730|0)",
                     "reinforcement": {
-                        "cover": 0.019999999552965164,
+                        "cover": 0.02,
                         "positionsRelativeTo": "ORIGIN",
                         "groups": [
                             {
-                                "type": "POINT",
-                                "position": "-717.6,30 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-721.7,34.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-1013.7,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-978.2,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-978.2,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-704,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-704,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-664,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-664,2077.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-802,1801.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-802,1407.9 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-653.5,347.4 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "-514.1,180 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "514.1,180 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "653.5,347.4 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "802,1407.9 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "802,1801.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "664,2077.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "664,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "704,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "704,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "978.2,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "978.2,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "1013.7,2120 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "721.7,34.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "POINT",
-                                "position": "717.6,30 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-754.1,265.9 -981.3,1888.2 ",
-                                "description": "8\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-841.1,2170 -841.1,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-733,1939.1 -733,1939.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-802,1604.5 -802,1604.5 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-772.3,1195.8 -683.2,559.5 ",
-                                "description": "4\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "-308.4,180 308.4,180 ",
-                                "description": "4\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "683.2,559.5 772.3,1195.8 ",
-                                "description": "4\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "802,1604.5 802,1604.5 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "733,1939.1 733,1939.1 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "841.1,2170 841.1,2170 ",
-                                "description": "\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "981.3,1888.2 754.1,265.9 ",
-                                "description": "8\"500B modified-10041\"20",
-                                "preload": {
-                                    "preloadType": "NONE",
-                                    "value": 0.0,
-                                    "exclude": true
-                                }
-                            },
-                            {
-                                "type": "LINE",
-                                "position": "478.4,30 -478.4,30 ",
-                                "description": "5\"500B modified-10041\"20",
+                                "type": "PERIMETER",
+                                "position": "",
+                                "description": "B20-200",
                                 "preload": {
                                     "preloadType": "NONE",
                                     "value": 0.0,
@@ -519,8 +149,8 @@
                     "outputOptions": {
                         "uls": {
                             "loads": true,
-                            "deformations": false,
-                            "neutralAxis": false,
+                            "deformations": true,
+                            "neutralAxis": true,
                             "loadAtFailure": false,
                             "failureDeformations": false,
                             "utilisation": true,
@@ -531,10 +161,10 @@
                         "sls": {
                             "deformationsUncracked": false,
                             "deformationsCracked": false,
-                            "interpolatedDeformations": false,
-                            "stiffness": false,
-                            "cracking": false,
-                            "neutralAxis": false,
+                            "interpolatedDeformations": true,
+                            "stiffness": true,
+                            "cracking": true,
+                            "neutralAxis": true,
                             "loadsUncracked": false,
                             "loadsCracked": false,
                             "concrete": false,
@@ -555,10 +185,27 @@
                             "componentID": 1,
                             "activeState": true
                         }
+                    ],
+                    "cases": [
+                        {
+                            "load": {
+                                "fx": -10000000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -20000000.0
+                            }
+                        },
+                        {
+                            "load": {
+                                "fx": -30000000.0
+                            }
+                        }
                     ]
                 }
             ],
-            "rebarPercentage": 1.7376154276088593,
+            "rebarPercentage": 2.0316734230503584,
             "extents": {
                 "yMin": -1.0482,
                 "yMax": 1.0482,
@@ -721,458 +368,535 @@
                     "bars": [
                         {
                             "groupId": 0,
-                            "grade": 23,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7176000000000001,
-                            "z": -0.9644178895853229
+                            "y": 0.7175735931288071,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 1,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7217000000000001,
-                            "z": -0.9603178895853229
+                            "y": 0.7216827018775496,
+                            "z": -0.960308780836581
                         },
                         {
-                            "groupId": 2,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -1.0137,
-                            "z": 1.125582110414677
+                            "y": 1.0137074266527257,
+                            "z": 1.1255821104146762
                         },
                         {
-                            "groupId": 3,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.9782000000000001,
-                            "z": 1.125582110414677
+                            "y": 0.9782000000000001,
+                            "z": 1.1255821104146762
                         },
                         {
-                            "groupId": 4,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.9782000000000001,
-                            "z": 1.1755821104146769
+                            "y": 0.9782000000000001,
+                            "z": 1.1755821104146764
                         },
                         {
-                            "groupId": 5,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.7040000000000001,
+                            "z": 1.1755821104146764
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.7040000000000001,
+                            "z": 1.1255821104146762
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.664,
+                            "z": 1.1255821104146762
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.664,
+                            "z": 1.0826641497396698
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.802,
+                            "z": 0.8066641497396704
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.802,
+                            "z": 0.41349230079128774
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.6535239947349913,
+                            "z": -0.6470505939587737
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": 0.5140512483795333,
+                            "z": -0.8144178895853235
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.5140512483795333,
+                            "z": -0.8144178895853235
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.6535239947349913,
+                            "z": -0.6470505939587737
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.802,
+                            "z": 0.41349230079128774
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.802,
+                            "z": 0.8066641497396704
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.664,
+                            "z": 1.0826641497396698
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
+                            "diameter": 0.02,
+                            "y": -0.664,
+                            "z": 1.1255821104146762
+                        },
+                        {
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
                             "y": -0.7040000000000001,
-                            "z": 1.1755821104146769
+                            "z": 1.1255821104146762
                         },
                         {
-                            "groupId": 6,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
                             "y": -0.7040000000000001,
-                            "z": 1.125582110414677
+                            "z": 1.1755821104146764
                         },
                         {
-                            "groupId": 7,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.6640000000000001,
-                            "z": 1.125582110414677
+                            "y": -0.9781999999999998,
+                            "z": 1.1755821104146764
                         },
                         {
-                            "groupId": 8,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.6640000000000001,
-                            "z": 1.082682110414677
+                            "y": -0.9781999999999998,
+                            "z": 1.1255821104146762
                         },
                         {
-                            "groupId": 9,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8020000000000002,
-                            "z": 0.806682110414677
+                            "y": -1.0137074266527253,
+                            "z": 1.1255821104146762
                         },
                         {
-                            "groupId": 10,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8020000000000002,
-                            "z": 0.413482110414677
+                            "y": -0.7216827018775496,
+                            "z": -0.960308780836581
                         },
                         {
-                            "groupId": 11,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.6535000000000001,
-                            "z": -0.6470178895853229
+                            "y": -0.7175735931288071,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 12,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.5141000000000001,
-                            "z": -0.8144178895853229
+                            "y": 0.7482304041298383,
+                            "z": -0.7706823361773758
                         },
                         {
-                            "groupId": 13,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.5140999999999999,
-                            "z": -0.8144178895853229
+                            "y": 0.7747781063821271,
+                            "z": -0.5810558915181705
                         },
                         {
-                            "groupId": 14,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.6534999999999999,
-                            "z": -0.6470178895853229
+                            "y": 0.8013258086344157,
+                            "z": -0.3914294468589654
                         },
                         {
-                            "groupId": 15,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8019999999999999,
-                            "z": 0.413482110414677
+                            "y": 0.8278735108867045,
+                            "z": -0.2018030021997601
                         },
                         {
-                            "groupId": 16,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8019999999999999,
-                            "z": 0.806682110414677
+                            "y": 0.8544212131389932,
+                            "z": -0.012176557540554911
                         },
                         {
-                            "groupId": 17,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.6639999999999999,
-                            "z": 1.082682110414677
+                            "y": 0.880968915391282,
+                            "z": 0.17744988711865017
                         },
                         {
-                            "groupId": 18,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.6639999999999999,
-                            "z": 1.125582110414677
+                            "y": 0.9075166176435707,
+                            "z": 0.3670763317778555
                         },
                         {
-                            "groupId": 19,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7039999999999998,
-                            "z": 1.125582110414677
+                            "y": 0.9340643198958595,
+                            "z": 0.5567027764370608
                         },
                         {
-                            "groupId": 20,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7039999999999998,
-                            "z": 1.1755821104146769
+                            "y": 0.9606120221481481,
+                            "z": 0.7463292210962659
                         },
                         {
-                            "groupId": 21,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.9781999999999998,
-                            "z": 1.1755821104146769
+                            "y": 0.987159724400437,
+                            "z": 0.9359556657554712
                         },
                         {
-                            "groupId": 22,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.9781999999999998,
-                            "z": 1.125582110414677
+                            "y": 0.8411000000000001,
+                            "z": 1.1755821104146764
                         },
                         {
-                            "groupId": 23,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 1.0137,
-                            "z": 1.125582110414677
+                            "y": 0.733,
+                            "z": 0.9446641497396701
                         },
                         {
-                            "groupId": 24,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7216999999999999,
-                            "z": -0.9603178895853229
+                            "y": 0.802,
+                            "z": 0.610078225265479
                         },
                         {
-                            "groupId": 25,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7175999999999999,
-                            "z": -0.9644178895853229
+                            "y": 0.7772539991224986,
+                            "z": 0.23673515166627757
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7541000000000001,
-                            "z": -0.7285178895853229
+                            "y": 0.7525079982449971,
+                            "z": 0.059978002541267394
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.786557142857143,
-                            "z": -0.49676074672818005
+                            "y": 0.7277619973674957,
+                            "z": -0.11677914658374289
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8190142857142858,
-                            "z": -0.26500360387103716
+                            "y": 0.7030159964899942,
+                            "z": -0.29353629570875306
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8514714285714287,
-                            "z": -0.03324646101389439
+                            "y": 0.6782699956124928,
+                            "z": -0.47029344483376334
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8839285714285715,
-                            "z": 0.19851068184324838
+                            "y": 0.5837876215572623,
+                            "z": -0.7307342417720486
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.9163857142857144,
-                            "z": 0.4302678247003914
+                            "y": 0.3427008322530222,
+                            "z": -0.8144178895853235
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.9488428571428572,
-                            "z": 0.6620249675575341
+                            "y": 0.1713504161265111,
+                            "z": -0.8144178895853235
                         },
                         {
-                            "groupId": 26,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.9813000000000001,
-                            "z": 0.8937821104146771
+                            "y": 3.8065483106213926e-17,
+                            "z": -0.8144178895853235
                         },
                         {
-                            "groupId": 27,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8411000000000001,
-                            "z": 1.1755821104146769
+                            "y": -0.1713504161265111,
+                            "z": -0.8144178895853235
                         },
                         {
-                            "groupId": 28,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7330000000000001,
-                            "z": 0.9446821104146771
+                            "y": -0.34270083225302234,
+                            "z": -0.8144178895853235
                         },
                         {
-                            "groupId": 29,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.8020000000000002,
-                            "z": 0.6100821104146771
+                            "y": -0.5837876215572623,
+                            "z": -0.7307342417720486
                         },
                         {
-                            "groupId": 30,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7723000000000001,
-                            "z": 0.20138211041467702
+                            "y": -0.6782699956124928,
+                            "z": -0.47029344483376356
                         },
                         {
-                            "groupId": 30,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7426000000000001,
-                            "z": -0.010717889585322937
+                            "y": -0.7030159964899942,
+                            "z": -0.2935362957087533
                         },
                         {
-                            "groupId": 30,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.7129000000000001,
-                            "z": -0.2228178895853229
+                            "y": -0.7277619973674957,
+                            "z": -0.116779146583743
                         },
                         {
-                            "groupId": 30,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.6832000000000001,
-                            "z": -0.43491788958532296
+                            "y": -0.7525079982449971,
+                            "z": 0.05997800254126717
                         },
                         {
-                            "groupId": 31,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.3084000000000001,
-                            "z": -0.8144178895853229
+                            "y": -0.7772539991224986,
+                            "z": 0.23673515166627734
                         },
                         {
-                            "groupId": 31,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": -0.10280000000000011,
-                            "z": -0.8144178895853229
+                            "y": -0.802,
+                            "z": 0.610078225265479
                         },
                         {
-                            "groupId": 31,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.10279999999999989,
-                            "z": -0.8144178895853229
+                            "y": -0.733,
+                            "z": 0.9446641497396701
                         },
                         {
-                            "groupId": 31,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.3083999999999999,
-                            "z": -0.8144178895853229
+                            "y": -0.8411,
+                            "z": 1.1755821104146764
                         },
                         {
-                            "groupId": 32,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.6831999999999999,
-                            "z": -0.43491788958532296
+                            "y": -0.9871597244004366,
+                            "z": 0.9359556657554712
                         },
                         {
-                            "groupId": 32,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7128999999999999,
-                            "z": -0.222817889585323
+                            "y": -0.960612022148148,
+                            "z": 0.7463292210962661
                         },
                         {
-                            "groupId": 32,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7425999999999999,
-                            "z": -0.010717889585322937
+                            "y": -0.9340643198958593,
+                            "z": 0.5567027764370608
                         },
                         {
-                            "groupId": 32,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7722999999999999,
-                            "z": 0.20138211041467702
+                            "y": -0.9075166176435705,
+                            "z": 0.3670763317778555
                         },
                         {
-                            "groupId": 33,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8019999999999999,
-                            "z": 0.6100821104146771
+                            "y": -0.8809689153912819,
+                            "z": 0.1774498871186504
                         },
                         {
-                            "groupId": 34,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7329999999999999,
-                            "z": 0.9446821104146771
+                            "y": -0.8544212131389931,
+                            "z": -0.0121765575405548
                         },
                         {
-                            "groupId": 35,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8410999999999998,
-                            "z": 1.1755821104146769
+                            "y": -0.8278735108867045,
+                            "z": -0.2018030021997601
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.9812999999999998,
-                            "z": 0.8937821104146771
+                            "y": -0.8013258086344157,
+                            "z": -0.3914294468589654
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.948842857142857,
-                            "z": 0.6620249675575344
+                            "y": -0.774778106382127,
+                            "z": -0.5810558915181705
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.9163857142857141,
-                            "z": 0.4302678247003914
+                            "y": -0.7482304041298383,
+                            "z": -0.7706823361773758
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8839285714285713,
-                            "z": 0.1985106818432486
+                            "y": -0.5381801948466053,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8514714285714284,
-                            "z": -0.03324646101389428
+                            "y": -0.3587867965644035,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.8190142857142856,
-                            "z": -0.26500360387103716
+                            "y": -0.17939339828220177,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7865571428571427,
-                            "z": -0.49676074672817994
+                            "y": 3.8065483106213926e-17,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 36,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.7540999999999999,
-                            "z": -0.7285178895853229
+                            "y": 0.17939339828220183,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 37,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.4783999999999999,
-                            "z": -0.9644178895853229
+                            "y": 0.35878679656440354,
+                            "z": -0.9644178895853234
                         },
                         {
-                            "groupId": 37,
-                            "grade": 23,
+                            "groupId": 0,
+                            "grade": 1,
                             "diameter": 0.02,
-                            "y": 0.23919999999999988,
-                            "z": -0.9644178895853229
-                        },
-                        {
-                            "groupId": 37,
-                            "grade": 23,
-                            "diameter": 0.02,
-                            "y": -1.0480428490475045e-16,
-                            "z": -0.9644178895853229
-                        },
-                        {
-                            "groupId": 37,
-                            "grade": 23,
-                            "diameter": 0.02,
-                            "y": -0.23920000000000013,
-                            "z": -0.9644178895853229
-                        },
-                        {
-                            "groupId": 37,
-                            "grade": 23,
-                            "diameter": 0.02,
-                            "y": -0.4784000000000001,
-                            "z": -0.9644178895853229
+                            "y": 0.5381801948466053,
+                            "z": -0.9644178895853234
                         }
                     ]
                 }
