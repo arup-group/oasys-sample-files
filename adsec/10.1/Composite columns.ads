@@ -6,7 +6,7 @@
         "Copyright": "Copyright (c) Oasys 2026",
         "Description": "AdSec",
         "ProgramVersion": "10.1",
-        "FullVersion": "10.1.0.32535"
+        "FullVersion": "10.1.0.34055"
     },
     "titles": {
         "jobTitle": "composite strengthening"
