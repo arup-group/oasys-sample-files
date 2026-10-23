@@ -1,0 +1,3 @@
+
+- [From_Concept_to_Detailed_Structural_Design_Shared_Across_the_Project_Team-30_Sept_2026/](From_Concept_to_Detailed_Structural_Design_Shared_Across_the_Project_Team-30_Sept_2026/)
+- [Innovative_Engineering_for_Repetitive_Structures-06_Nov_2025/](Innovative_Engineering_for_Repetitive_Structures-06_Nov_2025/)
